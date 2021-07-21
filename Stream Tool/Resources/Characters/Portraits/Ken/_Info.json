@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Ken1",
+	 "Ken2",
+	 "Ken3",
+	 "Ken4",
+	 "Ken5",
+	 "Ken6",
+ 	 "Ken7",
+	 "Ken8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -550,
+             "y": 100,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -550,
+            "y": 100,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

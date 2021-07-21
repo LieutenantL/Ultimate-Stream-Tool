@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Luigi1",
+	 "Luigi2",
+	 "Luigi3",
+	 "Luigi4",
+	 "Luigi5",
+	 "Luigi6",
+ 	 "Luigi7",
+	 "Luigi8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

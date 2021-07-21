@@ -1,0 +1,12 @@
+{
+    "name": "Shoal",
+    "tag": "",
+    "characters": [
+        {
+            "character": "Diddy Kong",  "skin": "Diddy Kong2"
+        },
+	{
+	    "character": "Ice Climbers",  "skin": "Ice Climbers3"
+	}
+    ]
+}

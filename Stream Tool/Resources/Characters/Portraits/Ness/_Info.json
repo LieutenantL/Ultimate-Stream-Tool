@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Ness1",
+	 "Ness2",
+	 "Ness3",
+	 "Ness4",
+	 "Ness5",
+	 "Ness6",
+ 	 "Ness7",
+	 "Ness8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 30,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 30,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Bayonetta1",
+	 "Bayonetta2",
+	 "Bayonetta3",
+	 "Bayonetta4",
+	 "Bayonetta5",
+	 "Bayonetta6",
+ 	 "Bayonetta7",
+	 "Bayonetta8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 20,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 20,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

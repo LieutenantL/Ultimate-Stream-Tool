@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Byleth1",
+	 "Byleth2",
+	 "Byleth3",
+	 "Byleth4",
+	 "Byleth5",
+	 "Byleth6",
+ 	 "Byleth7",
+	 "Byleth8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": 70,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": 70,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

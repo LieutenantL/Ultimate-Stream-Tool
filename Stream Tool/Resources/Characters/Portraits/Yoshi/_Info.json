@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Yoshi1",
+	 "Yoshi2",
+	 "Yoshi3",
+	 "Yoshi4",
+	 "Yoshi5",
+	 "Yoshi6",
+ 	 "Yoshi7",
+	 "Yoshi8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": 80,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": 80,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

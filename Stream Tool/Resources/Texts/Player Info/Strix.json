@@ -1,0 +1,12 @@
+{
+    "name": "Strix",
+    "tag": "",
+    "characters": [
+        {
+            "character": "Link",  "skin": "Link4"
+        },
+	{
+	    "character": "cloud",  "skin": "Cloud6"
+	}
+    ]
+}

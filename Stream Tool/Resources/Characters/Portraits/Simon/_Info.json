@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Simon1",
+	 "Simon2",
+	 "Simon3",
+	 "Simon4",
+	 "Simon5",
+	 "Simon6",
+ 	 "Simon7",
+	 "Simon8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

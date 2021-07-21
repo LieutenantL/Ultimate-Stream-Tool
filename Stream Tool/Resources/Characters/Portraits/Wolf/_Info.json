@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Wolf1",
+	 "Wolf2",
+	 "Wolf3",
+	 "Wolf4",
+	 "Wolf5",
+	 "Wolf6",
+ 	 "Wolf7",
+	 "Wolf8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 80,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 80,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

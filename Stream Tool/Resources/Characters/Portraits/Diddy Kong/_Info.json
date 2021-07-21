@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Diddy Kong1",
+	 "Diddy Kong2",
+	 "Diddy Kong3",
+	 "Diddy Kong4",
+	 "Diddy Kong5",
+	 "Diddy Kong6",
+ 	 "Diddy Kong7",
+	 "Diddy Kong8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": -50,
+             "scale": 0.9
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": -50,
+            "scale": 0.9
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

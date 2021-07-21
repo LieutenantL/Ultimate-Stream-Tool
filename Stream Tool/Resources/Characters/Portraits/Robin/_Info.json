@@ -1,0 +1,73 @@
+{
+    "skinList": [
+ 	 "Robin1",
+	 "Robin2",
+	 "Robin3",
+	 "Robin4",
+	 "Robin5",
+	 "Robin6",
+ 	 "Robin7",
+	 "Robin8"
+    ],
+    "scoreboard": {
+        "neutral": {
+             "x": -470,
+             "y": 50,
+             "scale": 1
+        },
+ 	"Robin2": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+        },
+	"Robin4": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+        },
+	"Robin6": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+        },
+	"Robin8": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 50,
+            "scale": 1
+         },
+ 	 "Robin2": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+         },
+	 "Robin4": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+         },
+	 "Robin6": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+         },
+	 "Robin8": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

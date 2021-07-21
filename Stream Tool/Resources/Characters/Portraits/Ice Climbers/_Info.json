@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Ice Climbers1",
+	 "Ice Climbers2",
+	 "Ice Climbers3",
+	 "Ice Climbers4",
+	 "Ice Climbers5",
+	 "Ice Climbers6",
+ 	 "Ice Climbers7",
+	 "Ice Climbers8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": 0,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": 0,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

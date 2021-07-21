@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Pikachu1",
+	 "Pikachu2",
+	 "Pikachu3",
+	 "Pikachu4",
+	 "Pikachu5",
+	 "Pikachu6",
+ 	 "Pikachu7",
+	 "Pikachu8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": -50,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": -50,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

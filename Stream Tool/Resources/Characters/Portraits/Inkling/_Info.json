@@ -1,0 +1,53 @@
+{
+    "skinList": [
+ 	 "Inkling1",
+	 "Inkling2",
+	 "Inkling3",
+	 "Inkling4",
+	 "Inkling5",
+	 "Inkling6",
+ 	 "Inkling7",
+	 "Inkling8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": -20,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": -20,
+            "scale": 1
+         },
+	 "Inkling2": {
+            "x": -470,
+            "y": 50,
+            "scale": 1
+         },
+	 "Inkling4": {
+            "x": -470,
+            "y": 50,
+            "scale": 1
+         },
+	 "Inkling6": {
+            "x": -470,
+            "y": 50,
+            "scale": 1
+         },
+	 "Inkling8": {
+            "x": -470,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Lucas1",
+	 "Lucas2",
+	 "Lucas3",
+	 "Lucas4",
+	 "Lucas5",
+	 "Lucas6",
+ 	 "Lucas7",
+	 "Lucas8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -550,
+             "y": 30,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -550,
+            "y": 30,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

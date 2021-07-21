@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Corrin1",
+	 "Corrin2",
+	 "Corrin3",
+	 "Corrin4",
+	 "Corrin5",
+	 "Corrin6",
+ 	 "Corrin7",
+	 "Corrin8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -530,
+             "y": 100,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -530,
+            "y": 100,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

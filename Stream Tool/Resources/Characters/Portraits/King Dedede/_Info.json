@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "King Dedede1",
+	 "King Dedede2",
+	 "King Dedede3",
+	 "King Dedede4",
+	 "King Dedede5",
+	 "King Dedede6",
+ 	 "King Dedede7",
+	 "King Dedede8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

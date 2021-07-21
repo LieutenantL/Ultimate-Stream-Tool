@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "King K Rool1",
+	 "King K Rool2",
+	 "King K Rool3",
+	 "King K Rool4",
+	 "King K Rool5",
+	 "King K Rool6",
+ 	 "King K Rool7",
+	 "King K Rool8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

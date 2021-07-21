@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Captain Falcon1",
+	 "Captain Falcon2",
+	 "Captain Falcon3",
+	 "Captain Falcon4",
+	 "Captain Falcon5",
+	 "Captain Falcon6",
+ 	 "Captain Falcon7",
+	 "Captain Falcon8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 100,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 100,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

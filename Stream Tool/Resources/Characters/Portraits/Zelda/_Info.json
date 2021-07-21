@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Zelda1",
+	 "Zelda2",
+	 "Zelda3",
+	 "Zelda4",
+	 "Zelda5",
+	 "Zelda6",
+ 	 "Zelda7",
+	 "Zelda8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 100,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 100,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,129 @@
+{
+    "charactersBase": [
+        "Mario",
+        "Donkey Kong",
+        "Link",
+        "Samus",
+        "Dark Samus",
+        "Yoshi",
+        "Kirby",
+        "Fox",
+        "Pikachu",
+        "Luigi",
+        "Ness",
+        "Captain Falcon",
+        "Jigglypuff",
+        "Peach",
+        "Daisy",
+        "Bowser",
+        "Ice Climbers",
+        "Sheik",
+        "Zelda",
+        "Dr Mario",
+        "Pichu",
+        "Falco",
+        "Marth",
+        "Lucina",
+        "Young Link",
+        "Ganondorf",
+        "Mewtwo",
+        "Roy",
+        "Chrom",
+        "Mr Game and Watch",
+        "Meta Knight",
+        "Pit",
+        "Dark Pit",
+        "Zero Suit Samus",
+        "Wario",
+        "Snake",
+        "Ike",
+        "Pokemon Trainer",
+        "Diddy Kong",
+        "Lucas",
+        "Sonic",
+        "King Dedede",
+        "Olimar",
+        "Lucario",
+        "ROB",
+        "Toon Link", 
+        "Wolf",
+        "Villager",
+        "Mega Man",
+        "Wii Fit Trainer",
+        "Rosalina and Luma",
+        "Little Mac",
+        "Greninja",
+        "Palutena",
+        "Pac-Man",
+        "Robin",
+        "Shulk",
+        "Bowser Jr",
+        "Duck Hunt",
+        "Ryu",
+        "Ken",
+        "Cloud",
+        "Corrin",
+        "Bayonetta",
+        "Inkling",
+        "Ridley",
+        "Simon",
+        "Richter",
+        "King K Rool",
+        "Isabelle",
+        "Incineroar",
+        "Piranha Plant",
+        "Joker",
+        "Hero",
+        "Banjo and Kazooie",
+        "Terry",
+        "Byleth",
+        "Min Min",
+        "Steve",
+        "Sephiroth",
+        "Pyra",
+	"Kazuya",
+	"New",
+        "Mii Brawler",
+        "Mii Swordfighter",
+        "Mii Gunner",
+        "Random"
+    ],
+    "colorSlots": {
+        "color0": {
+            "name": "Red",
+            "hex": "#ed1c23"
+    	},
+ 	"color1": {
+  	    "name": "Blue",
+  	    "hex": "#00b7ef"
+        },
+        "color2": {
+            "name": "Pink",
+            "hex": "#ffa3b1"
+        },
+        "color3": {
+            "name": "Green",
+            "hex": "#a8e61d"
+        },
+        "color4": {
+            "name": "NetGreen",
+            "hex": "#42e564"
+        },
+        "color5": {
+            "name": "Purple",
+            "hex": "#846ae9"
+        },
+        "color6": {
+            "name": "Magenta",
+            "hex": "#ee1c8f"
+        },
+        "color7": {
+            "name": "Yellow",
+            "hex": "#dc8c00"
+        },
+        "color8": {
+            "name": "CPU",
+            "hex": "#808080"
+        }
+    }
+}

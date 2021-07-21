@@ -1,0 +1,41 @@
+{
+    "skinList": [
+ 	 "Pyra1",
+	 "Pyra2",
+	 "Pyra3",
+	 "Pyra4",
+	 "Pyra5",
+	 "Pyra6",
+ 	 "Pyra7",
+	 "Pyra8",
+	 "Mythra1",
+	 "Mythra2",
+	 "Mythra3",
+	 "Mythra4",
+	 "Mythra5",
+	 "Mythra6",
+ 	 "Mythra7",
+	 "Mythra8"
+    ],
+    "scoreboard": {
+        "neutral": {
+            "x": -450,
+            "y": 120,
+            "scale": 1
+        }
+    },
+    "vsScreen": {
+        "neutral": {
+           "x": -450,
+           "y": 120,
+           "scale": 1
+        }
+    },
+    "gui": {
+        "neutral": {
+           "x": -5,
+           "y": 38,
+           "scale": 4.5
+        }
+    }
+}

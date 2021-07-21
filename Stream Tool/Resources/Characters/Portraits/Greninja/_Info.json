@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Greninja1",
+	 "Greninja2",
+	 "Greninja3",
+	 "Greninja4",
+	 "Greninja5",
+	 "Greninja6",
+ 	 "Greninja7",
+	 "Greninja8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -520,
+             "y": 50,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -520,
+            "y": 50,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Zero Suit Samus1",
+	 "Zero Suit Samus2",
+	 "Zero Suit Samus3",
+	 "Zero Suit Samus4",
+	 "Zero Suit Samus5",
+	 "Zero Suit Samus6",
+ 	 "Zero Suit Samus7",
+	 "Zero Suit Samus8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 100,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 100,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

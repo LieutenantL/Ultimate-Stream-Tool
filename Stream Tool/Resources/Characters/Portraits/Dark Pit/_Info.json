@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Dark Pit1",
+	 "Dark Pit2",
+	 "Dark Pit3",
+	 "Dark Pit4",
+	 "Dark Pit5",
+	 "Dark Pit6",
+ 	 "Dark Pit7",
+	 "Dark Pit8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 30,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 30,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

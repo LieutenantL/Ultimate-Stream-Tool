@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Kazuya1",
+	 "Kazuya2",
+	 "Kazuya3",
+	 "Kazuya4",
+	 "Kazuya5",
+	 "Kazuya6",
+ 	 "Kazuya7",
+	 "Kazuya8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 90,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 90,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

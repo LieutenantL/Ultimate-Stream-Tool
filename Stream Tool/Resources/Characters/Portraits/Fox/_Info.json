@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Fox1",
+	 "Fox2",
+	 "Fox3",
+	 "Fox4",
+	 "Fox5",
+	 "Fox6",
+ 	 "Fox7",
+	 "Fox8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": 40,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": 40,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

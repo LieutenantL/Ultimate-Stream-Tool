@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Rosalina and Luma1",
+	 "Rosalina and Luma2",
+	 "Rosalina and Luma3",
+	 "Rosalina and Luma4",
+	 "Rosalina and Luma5",
+	 "Rosalina and Luma6",
+ 	 "Rosalina and Luma7",
+	 "Rosalina and Luma8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": 70,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": 70,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

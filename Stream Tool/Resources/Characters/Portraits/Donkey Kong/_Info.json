@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Donkey Kong1",
+	 "Donkey Kong2",
+	 "Donkey Kong3",
+	 "Donkey Kong4",
+	 "Donkey Kong5",
+	 "Donkey Kong6",
+ 	 "Donkey Kong7",
+	 "Donkey Kong8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 0,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 0,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

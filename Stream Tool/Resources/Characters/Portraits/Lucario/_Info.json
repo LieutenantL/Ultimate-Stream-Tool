@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Lucario1",
+	 "Lucario2",
+	 "Lucario3",
+	 "Lucario4",
+	 "Lucario5",
+	 "Lucario6",
+ 	 "Lucario7",
+	 "Lucario8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 30,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 30,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

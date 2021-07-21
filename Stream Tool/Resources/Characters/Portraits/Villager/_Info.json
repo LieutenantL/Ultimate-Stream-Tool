@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Villager1",
+	 "Villager2",
+	 "Villager3",
+	 "Villager4",
+	 "Villager5",
+	 "Villager6",
+ 	 "Villager7",
+	 "Villager8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

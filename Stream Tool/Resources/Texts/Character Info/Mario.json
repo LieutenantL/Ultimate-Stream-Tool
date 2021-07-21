@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Mario1",
+	 "Mario2",
+	 "Mario3",
+	 "Mario4",
+	 "Mario5",
+	 "Mario6",
+ 	 "Mario7",
+	 "Mario8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 0,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 0,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

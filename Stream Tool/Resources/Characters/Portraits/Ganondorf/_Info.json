@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Ganondorf1",
+	 "Ganondorf2",
+	 "Ganondorf3",
+	 "Ganondorf4",
+	 "Ganondorf5",
+	 "Ganondorf6",
+ 	 "Ganondorf7",
+	 "Ganondorf8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 70,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 70,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

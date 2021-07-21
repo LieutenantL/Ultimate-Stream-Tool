@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Bowser1",
+	 "Bowser2",
+	 "Bowser3",
+	 "Bowser4",
+	 "Bowser5",
+	 "Bowser6",
+ 	 "Bowser7",
+	 "Bowser8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 0,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 0,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

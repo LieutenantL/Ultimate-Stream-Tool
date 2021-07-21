@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Terry1",
+	 "Terry2",
+	 "Terry3",
+	 "Terry4",
+	 "Terry5",
+	 "Terry6",
+ 	 "Terry7",
+	 "Terry8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 80,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 80,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

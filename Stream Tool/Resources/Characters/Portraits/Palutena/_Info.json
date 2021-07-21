@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Palutena1",
+	 "Palutena2",
+	 "Palutena3",
+	 "Palutena4",
+	 "Palutena5",
+	 "Palutena6",
+ 	 "Palutena7",
+	 "Palutena8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 40,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 40,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

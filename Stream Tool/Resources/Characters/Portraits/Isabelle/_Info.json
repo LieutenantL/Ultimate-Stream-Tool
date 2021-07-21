@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Isabelle1",
+	 "Isabelle2",
+	 "Isabelle3",
+	 "Isabelle4",
+	 "Isabelle5",
+	 "Isabelle6",
+ 	 "Isabelle7",
+	 "Isabelle8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": 0,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": 0,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

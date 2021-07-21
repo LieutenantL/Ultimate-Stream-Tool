@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Jigglypuff1",
+	 "Jigglypuff2",
+	 "Jigglypuff3",
+	 "Jigglypuff4",
+	 "Jigglypuff5",
+	 "Jigglypuff6",
+ 	 "Jigglypuff7",
+	 "Jigglypuff8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": -20,
+             "scale": 1.05
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": -20,
+            "scale": 1.05
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

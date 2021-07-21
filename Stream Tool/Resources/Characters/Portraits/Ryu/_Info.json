@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Ryu1",
+	 "Ryu2",
+	 "Ryu3",
+	 "Ryu4",
+	 "Ryu5",
+	 "Ryu6",
+ 	 "Ryu7",
+	 "Ryu8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -480,
+             "y": 70,
+             "scale": 0.9
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -480,
+            "y": 70,
+            "scale": 0.9
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

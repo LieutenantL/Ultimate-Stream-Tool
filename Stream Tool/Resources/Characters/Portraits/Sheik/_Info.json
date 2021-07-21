@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Sheik1",
+	 "Sheik2",
+	 "Sheik3",
+	 "Sheik4",
+	 "Sheik5",
+	 "Sheik6",
+ 	 "Sheik7",
+	 "Sheik8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -530,
+             "y": 70,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -530,
+            "y": 70,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

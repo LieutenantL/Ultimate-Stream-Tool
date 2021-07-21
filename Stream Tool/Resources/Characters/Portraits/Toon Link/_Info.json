@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Toon Link1",
+	 "Toon Link2",
+	 "Toon Link3",
+	 "Toon Link4",
+	 "Toon Link5",
+	 "Toon Link6",
+ 	 "Toon Link7",
+	 "Toon Link8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 0,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 0,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

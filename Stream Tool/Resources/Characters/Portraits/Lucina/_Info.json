@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Lucina1",
+	 "Lucina2",
+	 "Lucina3",
+	 "Lucina4",
+	 "Lucina5",
+	 "Lucina6",
+ 	 "Lucina7",
+	 "Lucina8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 100,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 100,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

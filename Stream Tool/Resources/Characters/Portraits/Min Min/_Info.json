@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Min Min1",
+	 "Min Min2",
+	 "Min Min3",
+	 "Min Min4",
+	 "Min Min5",
+	 "Min Min6",
+ 	 "Min Min7",
+	 "Min Min8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 0,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 0,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

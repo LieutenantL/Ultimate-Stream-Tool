@@ -1,0 +1,53 @@
+{
+    "skinList": [
+ 	 "Sephiroth1",
+	 "Sephiroth2",
+	 "Sephiroth3",
+	 "Sephiroth4",
+	 "Sephiroth5",
+	 "Sephiroth6",
+ 	 "Sephiroth7",
+	 "Sephiroth8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -590,
+             "y": 20,
+             "scale": 1.05
+         },
+	 "Sephiroth7": {
+            "x": -570,
+            "y": 50,
+            "scale": 1.05
+         },
+	 "Sephiroth8": {
+            "x": -570,
+            "y": 50,
+            "scale": 1.05
+         }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -590,
+            "y": 20,
+            "scale": 1.05
+         },
+	 "Sephiroth7": {
+            "x": -570,
+            "y": 50,
+            "scale": 1.05
+         },
+	 "Sephiroth8": {
+            "x": -570,
+            "y": 50,
+            "scale": 1.05
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

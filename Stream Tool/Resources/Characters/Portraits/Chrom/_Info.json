@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Chrom1",
+	 "Chrom2",
+	 "Chrom3",
+	 "Chrom4",
+	 "Chrom5",
+	 "Chrom6",
+ 	 "Chrom7",
+	 "Chrom8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 50,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 50,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Wii Fit Trainer1",
+	 "Wii Fit Trainer2",
+	 "Wii Fit Trainer3",
+	 "Wii Fit Trainer4",
+	 "Wii Fit Trainer5",
+	 "Wii Fit Trainer6",
+ 	 "Wii Fit Trainer7",
+	 "Wii Fit Trainer8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -550,
+             "y": 70,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -550,
+            "y": 70,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

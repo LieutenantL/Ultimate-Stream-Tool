@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Samus1",
+	 "Samus2",
+	 "Samus3",
+	 "Samus4",
+	 "Samus5",
+	 "Samus6",
+ 	 "Samus7",
+	 "Samus8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -490,
+             "y": 20,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -490,
+            "y": 20,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

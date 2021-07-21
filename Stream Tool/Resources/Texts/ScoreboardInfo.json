@@ -1,0 +1,65 @@
+{
+  "player": [
+    {
+      "name": "Chop",
+      "tag": "",
+      "character": "Pokemon Trainer",
+      "skin": "Pokemon Trainer4"
+    },
+    {
+      "name": "Chronos",
+      "tag": "",
+      "character": "Snake",
+      "skin": "Snake6"
+    },
+    {
+      "name": "",
+      "tag": "",
+      "character": "Random",
+      "skin": ""
+    },
+    {
+      "name": "",
+      "tag": "",
+      "character": "Random",
+      "skin": ""
+    }
+  ],
+  "teamName": [
+    "",
+    ""
+  ],
+  "color": [
+    "Red",
+    "Blue"
+  ],
+  "score": [
+    0,
+    0
+  ],
+  "wl": [
+    "Nada",
+    "Nada"
+  ],
+  "bestOf": "Bo5",
+  "gamemode": 1,
+  "round": "grand finals",
+  "tournamentName": "",
+  "caster": [
+    {
+      "name": "",
+      "twitter": "",
+      "twitch": ""
+    },
+    {
+      "name": "",
+      "twitter": "",
+      "twitch": ""
+    }
+  ],
+  "allowIntro": false,
+  "workshop": false,
+  "forceHD": false,
+  "noLoAHD": false,
+  "forceMM": false
+}

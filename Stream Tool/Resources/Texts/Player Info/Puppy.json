@@ -1,0 +1,12 @@
+{
+    "name": "Puppy",
+    "tag": "",
+    "characters": [
+        {
+            "character": "Falco",  "skin": "Falco3"
+        },
+	{
+	    "character": "Mario",  "skin": "Mario8"
+	}
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Kirby1",
+	 "Kirby2",
+	 "Kirby3",
+	 "Kirby4",
+	 "Kirby5",
+	 "Kirby6",
+ 	 "Kirby7",
+	 "Kirby8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

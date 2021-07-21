@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Joker1",
+	 "Joker2",
+	 "Joker3",
+	 "Joker4",
+	 "Joker5",
+	 "Joker6",
+ 	 "Joker7",
+	 "Joker8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 150,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 150,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

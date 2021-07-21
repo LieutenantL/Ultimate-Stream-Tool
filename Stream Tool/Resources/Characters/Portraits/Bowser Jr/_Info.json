@@ -1,0 +1,38 @@
+{
+    "skinList": [
+ 	 "Bowser Jr1",
+	 "Bowser Jr2",
+	 "Bowser Jr3",
+	 "Bowser Jr4",
+	 "Bowser Jr5",
+	 "Bowser Jr6",
+ 	 "Bowser Jr7",
+	 "Bowser Jr8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 20,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 20,
+            "scale": 1.1
+         },
+	 "Bowser Jr7": {
+	    "x": -600,
+	    "y": 20,
+	    "scale": 1.1
+	 }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

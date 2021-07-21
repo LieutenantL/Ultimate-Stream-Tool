@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Falco1",
+	 "Falco2",
+	 "Falco3",
+	 "Falco4",
+	 "Falco5",
+	 "Falco6",
+ 	 "Falco7",
+	 "Falco8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -420,
+             "y": 30,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -420,
+            "y": 30,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Dr Mario1",
+	 "Dr Mario2",
+	 "Dr Mario3",
+	 "Dr Mario4",
+	 "Dr Mario5",
+	 "Dr Mario6",
+ 	 "Dr Mario7",
+	 "Dr Mario8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

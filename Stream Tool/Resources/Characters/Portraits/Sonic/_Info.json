@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Sonic1",
+	 "Sonic2",
+	 "Sonic3",
+	 "Sonic4",
+	 "Sonic5",
+	 "Sonic6",
+ 	 "Sonic7",
+	 "Sonic8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Mega Man1",
+	 "Mega Man2",
+	 "Mega Man3",
+	 "Mega Man4",
+	 "Mega Man5",
+	 "Mega Man6",
+ 	 "Mega Man7",
+	 "Mega Man8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Shulk1",
+	 "Shulk2",
+	 "Shulk3",
+	 "Shulk4",
+	 "Shulk5",
+	 "Shulk6",
+ 	 "Shulk7",
+	 "Shulk8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 0,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 0,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

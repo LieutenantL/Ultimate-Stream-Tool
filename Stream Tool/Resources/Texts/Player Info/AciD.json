@@ -1,0 +1,12 @@
+{
+    "name": "AciD",
+    "tag": "",
+    "characters": [
+        {
+            "character": "Greninja",  "skin": "Greninja5"
+        },
+	{
+	    "character": "Yoshi",  "skin" : "Yoshi6"
+	}
+    ]
+}

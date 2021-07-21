@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Pichu1",
+	 "Pichu2",
+	 "Pichu3",
+	 "Pichu4",
+	 "Pichu5",
+	 "Pichu6",
+ 	 "Pichu7",
+	 "Pichu8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -490,
+             "y": 0,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -490,
+            "y": 0,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

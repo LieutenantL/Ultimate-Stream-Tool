@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Wario1",
+	 "Wario2",
+	 "Wario3",
+	 "Wario4",
+	 "Wario5",
+	 "Wario6",
+ 	 "Wario7",
+	 "Wario8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -470,
+             "y": 70,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -470,
+            "y": 70,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

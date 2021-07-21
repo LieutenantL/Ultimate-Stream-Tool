@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Daisy1",
+	 "Daisy2",
+	 "Daisy3",
+	 "Daisy4",
+	 "Daisy5",
+	 "Daisy6",
+ 	 "Daisy7",
+	 "Daisy8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 50,
+             "scale": 1.1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 50,
+            "scale": 1.1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

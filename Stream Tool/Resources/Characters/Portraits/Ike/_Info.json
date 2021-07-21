@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Ike1",
+	 "Ike2",
+	 "Ike3",
+	 "Ike4",
+	 "Ike5",
+	 "Ike6",
+ 	 "Ike7",
+	 "Ike8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -450,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -450,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

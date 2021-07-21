@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Duck Hunt1",
+	 "Duck Hunt2",
+	 "Duck Hunt3",
+	 "Duck Hunt4",
+	 "Duck Hunt5",
+	 "Duck Hunt6",
+ 	 "Duck Hunt7",
+	 "Duck Hunt8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": -70,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": -70,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Piranha Plant1",
+	 "Piranha Plant2",
+	 "Piranha Plant3",
+	 "Piranha Plant4",
+	 "Piranha Plant5",
+	 "Piranha Plant6",
+ 	 "Piranha Plant7",
+	 "Piranha Plant8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 150,
+             "scale": 0.95
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 150,
+            "scale": 0.95
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

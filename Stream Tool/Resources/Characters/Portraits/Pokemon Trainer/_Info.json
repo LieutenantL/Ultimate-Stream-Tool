@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Pokemon Trainer1",
+	 "Pokemon Trainer2",
+	 "Pokemon Trainer3",
+	 "Pokemon Trainer4",
+	 "Pokemon Trainer5",
+	 "Pokemon Trainer6",
+ 	 "Pokemon Trainer7",
+	 "Pokemon Trainer8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

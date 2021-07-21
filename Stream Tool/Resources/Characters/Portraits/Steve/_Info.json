@@ -1,0 +1,33 @@
+{
+    "skinList": [
+ 	 "Steve1",
+	 "Steve2",
+	 "Steve3",
+	 "Steve4",
+	 "Steve5",
+	 "Steve6",
+ 	 "Steve7",
+	 "Steve8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -630,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -630,
+            "y": 50,
+            "scale": 1
+         }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}
