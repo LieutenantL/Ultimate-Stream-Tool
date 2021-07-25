@@ -46,3 +46,9 @@ Yes, the instructions above are enough, but we can do better. **All of this is o
 
 ### Closing notes
 This project is a heavily modified off of [Readek's](https://twitter.com/Readeku) [RoA Stream Tool](https://github.com/Readek/RoA-Stream-Tool), so many thanks to them :)
+
+If you have any suggestions for me, you can contact me on Twitter [@Lieutenant_L5](https://twitter.com/lieutenant_l5)!
+
+---
+
+Resources: [The spriters resource](https://www.spriters-resource.com/nintendo_switch/supersmashbrosultimate/)
