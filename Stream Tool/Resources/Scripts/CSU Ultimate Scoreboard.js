@@ -480,23 +480,23 @@ function changeGM(gm) {
 			pTag[i].style.fontSize = tagSizeDubs;
 			resizeText(pWrapper[i]);
 		}
-		pWrapper[0].style.left = "375px";
-		pWrapper[1].style.right = "375px";
+		pWrapper[0].style.left = "410px";
+		pWrapper[1].style.right = "410px";
 
-		document.getElementById('p1CharaMask').style.left = "295px";
+		document.getElementById('p1CharaMask').style.left = "330px";
 		document.getElementById('p1Character').style.height = "3.75%";
 		document.getElementById('p1Character').style.width = "auto";
 
-		document.getElementById('p2CharaMask').style.left = "1565px";
+		document.getElementById('p2CharaMask').style.left = "1530px";
 		document.getElementById('p2Character').style.height = "3.75%";
 		document.getElementById('p2Character').style.width = "auto";
 
-		document.getElementById('p3CharaMask').style.left = "295px";
+		document.getElementById('p3CharaMask').style.left = "330px";
 		document.getElementById('p3CharaMask').style.top = "33px";
 		document.getElementById('p3Character').style.height = "3.75%";
 		document.getElementById('p3Character').style.width = "auto";
 
-		document.getElementById('p4CharaMask').style.left = "1565px";
+		document.getElementById('p4CharaMask').style.left = "1530px";
 		document.getElementById('p4CharaMask').style.top = "33px";
 		document.getElementById('p4Character').style.height = "3.75%";
 		document.getElementById('p4Character').style.width = "auto";
@@ -541,8 +541,8 @@ function changeGM(gm) {
 			pTag[i].style.fontSize = tagSize;
 			resizeText(pWrapper[i]);
 		}
-		pWrapper[0].style.left = "358px";
-		pWrapper[1].style.right = "358px";
+		pWrapper[0].style.left = "388px";
+		pWrapper[1].style.right = "388px";
 
 		for (let i = 0; i < 2; i++) {
 			colorImg[i].firstElementChild.setAttribute("d", colorPath1);			
@@ -552,7 +552,7 @@ function changeGM(gm) {
 		document.getElementById('p1Character').style.height = "";
 		document.getElementById('p1Character').style.width = "";
 
-		document.getElementById('p2CharaMask').style.left = "1535px";
+		document.getElementById('p2CharaMask').style.left = "1495px";
 		document.getElementById('p2Character').style.height = "";
 		document.getElementById('p2Character').style.width = "";
 
@@ -560,7 +560,7 @@ function changeGM(gm) {
 		document.getElementById('p3Character').style.height = "";
 		document.getElementById('p3Character').style.width = "";
 
-		document.getElementById('p4CharaMask').style.left = "1535px";
+		document.getElementById('p4CharaMask').style.left = "1495px";
 		document.getElementById('p4Character').style.height = "";
 		document.getElementById('p4Character').style.width = "";
 

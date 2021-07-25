@@ -1,16 +1,16 @@
 {
   "player": [
     {
-      "name": "Chop",
+      "name": "",
       "tag": "",
-      "character": "Pokemon Trainer",
-      "skin": "Pokemon Trainer4"
+      "character": "Random",
+      "skin": ""
     },
     {
-      "name": "Chronos",
+      "name": "",
       "tag": "",
-      "character": "Snake",
-      "skin": "Snake6"
+      "character": "Random",
+      "skin": ""
     },
     {
       "name": "",
@@ -41,9 +41,9 @@
     "Nada",
     "Nada"
   ],
-  "bestOf": "Bo5",
+  "bestOf": "Bo3",
   "gamemode": 1,
-  "round": "grand finals",
+  "round": "",
   "tournamentName": "",
   "caster": [
     {
