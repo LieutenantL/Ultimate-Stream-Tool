@@ -1,11 +1,11 @@
+![preview](https://i.imgur.com/xB2h476.png)
 # Ultimate Stream Tool
 
 ## Features
 - Easy and fast setup using a browser source. Drag and drop!
 - Handy interface to quickly change everything you need, like player names, characters, scores, round, casters...
 - Customizable Player Presets to setup your match in no time!
-- Now with 2v2 support
-- All the content on the GUI combo boxes can be edited at will. You can quickly change which characters or skins your tournament is going to be using.
+- Now with 2v2 support!
 - This is **not** a [Stream Control](http://farpnut.net/StreamControl) clone. It doesn't have anything to do with it, everything is custom made.
 
 ---
@@ -45,4 +45,10 @@ Yes, the instructions above are enough, but we can do better. **All of this is o
 ---
 
 ### Closing notes
-This project is a heavily modified off of Readek's [RoA Stream Tool](https://github.com/Readek/RoA-Stream-Tool), so many thanks to them :)
+This project is a heavily modified off of [Readek's](https://twitter.com/Readeku) [RoA Stream Tool](https://github.com/Readek/RoA-Stream-Tool), so many thanks to them :)
+
+If you have any suggestions for me, you can contact me on Twitter [@Lieutenant_L5](https://twitter.com/lieutenant_l5)!
+
+---
+
+Resources: [The spriters resource](https://www.spriters-resource.com/nintendo_switch/supersmashbrosultimate/)
