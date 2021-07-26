@@ -1,0 +1,80 @@
+{
+  "name": "ultimate-st-gui",
+  "productName": "Ultimate ST",
+  "version": "1.0.0",
+  "description": "An electron interface for Ultimate tournament streams.",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "npx @electron-forge/cli make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build": "electron-packager . Ultimate ST"
+  },
+  "keywords": [],
+  "author": {
+    "name": "L",
+    "email": ""
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "config": {
+            "name": "ultimate_st_gui"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "platforms": [
+            "darwin"
+          ],
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "mousetrap": "^1.6.5"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "9.0.5",
+    "electron-builder": "^22.10.5",
+    "electron-builder-squirrel-windows": "^22.11.5",
+    "electron-installer-squirrel-windows": "^1.3.0"
+  },
+  "build": {
+    "appId": "test.testo.testu",
+    "linux": {
+      "target": "AppImage"
+    },
+    "win": {
+      "target": "portable"
+    },
+    "portable": {
+      "unicode": false,
+      "artifactName": "Ultimate Stream Tool.exe"
+    }
+  }
+}
