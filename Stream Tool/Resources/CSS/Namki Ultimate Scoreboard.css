@@ -35,14 +35,14 @@ body {
     left: 0px;
     width: 488px;
     height: 76px;
-    margin-left: 15%;
+    margin-left: 17%;
 }
 .scoreboardP2 {
     position: absolute;
     right: 0px;
     width: 488px;
     height: 76px;
-    margin-right: 15%;
+    margin-right: 17%;
     transform: scaleX(-1);
 }
 .scoreboardP2Fixed {
@@ -50,7 +50,7 @@ body {
     right: 0px;
     width: 488px;
     height: 76px;
-    margin-right: 15%;
+    margin-right: 17%;
 }
 
 .tLogos {
@@ -65,7 +65,7 @@ body {
     left: 0px;
     width: 95px;
     height: auto;
-    margin-left: 15%;
+    margin-left: 17%;
 }
 
 .wlImgP2 {
@@ -75,7 +75,7 @@ body {
     right: 0px;
     width: 95px;
     height: auto;
-    margin-right: 15%;
+    margin-right: 17%;
 }
 
 .colors {
@@ -96,7 +96,7 @@ body {
     -webkit-mask-image: url("../Overlay/Scoreboard/Icon Mask.png");
     width: 100px;
     height: 100px;
-    left: 300px;
+    left: 340px;
 }
 
 .maskDubs {
@@ -113,11 +113,11 @@ body {
 }
 
 #p2CharaMask, #p4CharaMask {
-    left: 1535px;
+    left: 1495px;
 }
 
 #p2CharaMaskFixed {
-    left: 1535px;
+    left: 1495px;
 }
 
 #p3CharaMask {
@@ -157,18 +157,18 @@ body {
 }
 
 #p1Wrapper {
-    left: 358px;
+    left: 388px;
 }
 #p2Wrapper {
-    right: 358px;
+    right: 388px;
 }
 #p3Wrapper {
     top: 22px;
-    left: 358px;
+    left: 398px;
 }
 #p4Wrapper {
     top: 22px;
-    right: 358px;
+    right: 398px;
 }
 
 .tags {
@@ -186,11 +186,11 @@ body {
     white-space: nowrap;
 }
 #teamNameL {
-    left: 475px;
+    left: 515px;
 }
 
 #teamNameR {
-    right: 475px;
+    right: 515px;
 }
 
 
@@ -200,6 +200,7 @@ body {
 
 #roundBG {
     position: absolute;
+    top: -30px;
 }
 
 #round {
@@ -207,7 +208,7 @@ body {
     width: 215px;
     height: 34px;
     left: 853px;
-    top: 164px;
+    top: 134px;
     line-height: 32px;
     text-align: center;
     text-transform: uppercase;
