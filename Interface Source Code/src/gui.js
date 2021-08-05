@@ -1517,6 +1517,32 @@ function changeGamemode() {
 
         document.getElementById('scoreBox1').style.marginLeft = "10px";
         document.getElementById('scoreBox2').style.marginLeft = "10px";
+
+        tNameInps[0].value = "";
+        tNameInps[1].value = "";
+
+        pTagInps[2].value = "";
+        pNameInps[2].value = "";
+        pTagInps[3].value = "";
+        pNameInps[3].value = "";
+
+        document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
+        charP3 = "Random";
+        skinP3 = "";
+        charImgChange(charImgP3, charP3);
+        document.getElementById('skinListP3').innerHTML = '';
+        document.getElementById('skinListP3Mythra').innerHTML = '';
+        document.getElementById('skinSelectorP3').style.opacity = 0;
+        document.getElementById('skinSelectorP3').style.display = 'none';
+        document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
+        charP4 = "Random";
+        skinP4 = "";
+        charImgChange(charImgP4, charP4);
+        document.getElementById('skinListP4').innerHTML = '';
+        document.getElementById('skinListP4Mythra').innerHTML = '';
+        document.getElementById('skinSelectorP4').style.opacity = 0;
+        document.getElementById('skinSelectorP4').style.display = 'none';
+
     }
 }
 
