@@ -108,6 +108,7 @@ input[type="text"] {
 
 
 .teamName {
+  margin-left: 10px;
   float: left;
   width: 100%;
   display: none;

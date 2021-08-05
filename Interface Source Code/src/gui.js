@@ -18,8 +18,8 @@ const charPath = path.join(__dirname, '..', '..', 'Stream Tool', 'Resources', 'C
 /* const textPath = path.resolve('.', 'Resources', 'Texts');
 const charPath = path.resolve('.', 'Resources', 'Characters'); */
 //Windows (if building a portable exe)
-//const mainPath = path.resolve(process.env.PORTABLE_EXECUTABLE_DIR, 'Resources', 'Texts');
-//const charPath = path.resolve(process.env.PORTABLE_EXECUTABLE_DIR, 'Resources', 'Characters');
+// const mainPath = path.resolve(process.env.PORTABLE_EXECUTABLE_DIR, 'Resources', 'Texts');
+// const charPath = path.resolve(process.env.PORTABLE_EXECUTABLE_DIR, 'Resources', 'Characters');
 
 //yes we all like global variables
 const colorList = getJson(mainPath + "/InterfaceInfo");
@@ -45,7 +45,7 @@ let currentP1WL = sbInfo.wl[0];
 let currentP2WL = sbInfo.wl[1];
 let currentBestOf = "Bo3";
 
-let gamemode = 1;
+let gamemode = sbInfo.gamemode;
 
 let movedSettings = false;
 let charP1Active = false;
@@ -89,6 +89,13 @@ for (let i = 0; i < 4; i++) {
     pNameInps[i].value = sbInfo.player[i].name;
     changeInputWidth(pNameInps[i]);
 }
+
+document.getElementById("cName1").value = sbInfo.caster[0].name;
+document.getElementById("cTwitter1").value = sbInfo.caster[0].twitter;
+document.getElementById("cTwitch1").value = sbInfo.caster[0].twitch;
+document.getElementById("cName2").value = sbInfo.caster[1].name;
+document.getElementById("cTwitter2").value = sbInfo.caster[1].twitter;
+document.getElementById("cTwitch2").value = sbInfo.caster[1].twitch;
 
 const charImgP1 = document.getElementById('p1CharImg');
 const charImgP2 = document.getElementById('p2CharImg');
@@ -147,17 +154,19 @@ function init() {
     } else {
         document.getElementById('p2CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
     }
-    if (charP3 != "") {
-        document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/' + charP3 + '.png');
-    } else {
-        document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
+    if(gamemode == 2) {
+        if (charP3 != "") {
+            document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/' + charP3 + '.png');
+        } else {
+            document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
+        }
+        if (charP4 != "") {
+            document.getElementById('p4CharSelector').setAttribute('src', charPath + '/CSS/' + charP4 + '.png');
+        } else {
+            document.getElementById('p4CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
+        }
     }
-    if (charP4 != "") {
-        document.getElementById('p4CharSelector').setAttribute('src', charPath + '/CSS/' + charP4 + '.png');
-    } else {
-        document.getElementById('p4CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
-    }
-    
+
     // document.getElementById('p2CharSelector').setAttribute('src', charPath + '/CSS/' + charP3 + '.png');
     // document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
     // document.getElementById('p4CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
@@ -185,10 +194,12 @@ function init() {
     addSkinIcons(1);
     charImgChange(charImgP2, charP2, skinP2);
     addSkinIcons(2);
-    charImgChange(charImgP3, charP3, skinP3);
-    addSkinIcons(3);
-    charImgChange(charImgP4, charP4, skinP4);
-    addSkinIcons(4);
+    if(gamemode == 2) {
+        charImgChange(charImgP3, charP3, skinP3);
+        addSkinIcons(3);
+        charImgChange(charImgP4, charP4, skinP4);
+        addSkinIcons(4);
+    }
 
     //check whenever an image isnt found so we replace it with a "?"
     document.getElementById('p1CharImg').addEventListener("error", () => {
@@ -197,13 +208,14 @@ function init() {
     document.getElementById('p2CharImg').addEventListener("error", () => {
         document.getElementById('p2CharImg').setAttribute('src', charPath + '/Portraits/Random.png');// '+colorP2+'.png');
     });
-    document.getElementById('p3CharImg').addEventListener("error", () => {
-        document.getElementById('p3CharImg').setAttribute('src', charPath + '/Portraits/Random.png');// '+colorP1+'.png');
-    });
-    document.getElementById('p4CharImg').addEventListener("error", () => {
-        document.getElementById('p4CharImg').setAttribute('src', charPath + '/Portraits/Random.png');// '+colorP2+'.png');
-    });
-
+    if(gamemode == 2) {
+        document.getElementById('p3CharImg').addEventListener("error", () => {
+            document.getElementById('p3CharImg').setAttribute('src', charPath + '/Portraits/Random.png');// '+colorP1+'.png');
+        });
+        document.getElementById('p4CharImg').addEventListener("error", () => {
+            document.getElementById('p4CharImg').setAttribute('src', charPath + '/Portraits/Random.png');// '+colorP2+'.png');
+        });
+    }
 
     //score checks
     p1Win1.addEventListener("click", changeScoreTicks1);
@@ -238,28 +250,7 @@ function init() {
     p2W.addEventListener("click", setWLP2);
     p2L.addEventListener("click", setWLP2);
 
-    if (currentP1WL == "W") {
-        p1W.style.color = "var(--text1)";
-        p1L.style.color = "var(--text2)";
-        p1W.style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
-        p1L.style.backgroundImage = "var(--bg4)";
-    } else {
-        p1L.style.color = "var(--text1)";
-        p1W.style.color = "var(--text2)";
-        p1L.style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
-        p1W.style.backgroundImage = "var(--bg4)";
-    }
-    if (currentP2WL == "W") {
-        p2W.style.color = "var(--text1)";
-        p2L.style.color = "var(--text2)";
-        p2W.style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
-        p2L.style.backgroundImage = "var(--bg4)";
-    } else {
-        p2L.style.color = "var(--text1)";
-        p2W.style.color = "var(--text2)";
-        p2L.style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
-        p2W.style.backgroundImage = "var(--bg4)";
-    }
+    changeWLButtons();
 
     //for each player input field
     for (let i = 0; i < maxPlayers; i++) {
@@ -277,6 +268,10 @@ function init() {
         pTagInps[i].addEventListener("input", resizeInput);
     }
 
+    //check if the round is grand finals
+    roundInp.addEventListener("input", checkRound);
+    checkRound();
+
     //set click listeners to change the "best of" status
     document.getElementById("bo3Div").addEventListener("click", changeBestOf);
     document.getElementById("bo5Div").addEventListener("click", changeBestOf);
@@ -285,10 +280,6 @@ function init() {
     document.getElementById("bo3Div").style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
     p1Win3.style.display = "none";
     p2Win3.style.display = "none";
-
-    //check if the round is grand finals
-    roundInp.addEventListener("input", checkRound);
-    checkRound();
 
     //gamemode button
     document.getElementById("gamemode").addEventListener("click", changeGamemode);
@@ -299,6 +290,85 @@ function init() {
     document.getElementById('clearButton').addEventListener("click", clearPlayers);
 
     document.getElementById('nuke').addEventListener("click", nuke);
+
+    //Change overlay style if it was last on doubles
+    if(gamemode == 2) {
+
+        windowResize();
+
+        //show singles icon
+        gmIcon2.style.opacity = 0;
+        gmIcon1.style.left = "11px"; 
+        
+        //hide the background character image to reduce clutter
+
+        //add some margin to the color buttons, change border radius
+        const lColor = document.getElementById("p1Color");
+        lColor.style.marginLeft = "5px";
+        lColor.style.borderTopLeftRadius = "3px";
+        lColor.style.borderBottomLeftRadius = "3px";
+        const rColor = document.getElementById("p2Color");
+        rColor.style.marginLeft = "5px";
+        rColor.style.borderTopLeftRadius = "3px";
+        rColor.style.borderBottomLeftRadius = "3px";
+
+        for (let i = 1; i < 3; i++) {
+            document.getElementById("row1-"+i).insertAdjacentElement("afterbegin", wlButtons[i-1]);
+            document.getElementById("row1-"+i).insertAdjacentElement("afterbegin", document.getElementById('scoreBox'+i));
+            
+            document.getElementById("scoreText"+i).style.display = "none";
+
+            tNameInps[i-1].style.display = "block";
+
+            document.getElementById("row1-"+i).insertAdjacentElement("afterbegin", tNameInps[i-1]);
+
+            document.getElementById('row2-'+i).insertAdjacentElement("beforeend", document.getElementById('p' + i + 'Info'));
+
+            charSelectors[i+1].style.display = "block";
+            skinSelectors[i+1].style.display = "block";
+            document.getElementById('p' + (i+2) + 'CharImg').style.display = "block";
+                        
+            document.getElementById('skinListP'+(i+2)).style.display = "block";
+            document.getElementById('skinListP'+(i+2)+'Mythra').style.display = "block";
+
+            document.getElementById('p' + (i+2) + 'Info').style.display = "block";
+        }
+
+        document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/'+charP3+'.png');
+        charImgChange(charImgP3, charP3);
+        addSkinIcons(3);
+
+        document.getElementById('p4CharSelector').setAttribute('src', charPath + '/CSS/'+charP4+'.png');
+        charImgChange(charImgP4, charP4);
+        addSkinIcons(4);
+
+        //add some left margin to the name/tag inputs, add border radius, change max width
+        for (let i = 0; i < maxPlayers; i++) {
+            pTagInps[i].style.marginLeft = "5px";
+
+            pNameInps[i].style.borderTopRightRadius = "3px";
+            pNameInps[i].style.borderBottomRightRadius = "3px";
+
+            pTagInps[i].style.maxWidth = "45px"
+            pNameInps[i].style.maxWidth = "94px"
+        }
+
+
+        //change the hover tooltip
+        this.setAttribute('title', "Change the gamemode to Singles");
+
+        //dropdown menus for the right side will now be positioned to the right
+        for (let i = 1; i < 5; i+=2) {
+            pFinders[i].style.right = "0px";
+            pFinders[i].style.left = "";
+        }
+        document.getElementById("dropdownColorP2").style.right = "0px";
+        document.getElementById("dropdownColorP2").style.left = "";
+
+        document.getElementById('scoreBox1').style.marginLeft = "0px";
+        document.getElementById('scoreBox2').style.marginLeft = "0px";
+    }
+
 
     /* SETTINGS */
 
@@ -393,13 +463,13 @@ function nuke() {
 
     let response = inc.popup();
     if(response == 0) {
-        clearPlayers();
         document.getElementById('roundName').value = "";
         checkRound();
         document.getElementById('tournamentName').value = "";
         if(gamemode == 2) {
             changeGamemode();
         }
+        clearPlayers();
         writeScoreboard();
     }
 }
@@ -816,8 +886,10 @@ function addSkinIcons(pNum) {
 
     //if the list only has 1 skin or none, hide the skin list
     if (document.getElementById('skinListP'+pNum).children.length <= 1) {
+        document.getElementById('skinSelectorP'+pNum).style.display = 'none';
         document.getElementById('skinSelectorP'+pNum).style.opacity = 0;
     } else {
+        document.getElementById('skinSelectorP'+pNum).style.display = 'flex';
         document.getElementById('skinSelectorP'+pNum).style.opacity = 1;
     }
 }
@@ -1194,11 +1266,26 @@ function changeBestOf() {
         theOtherBestOf = document.getElementById("bo3Div");
         p1Win3.style.display = "block";
         p2Win3.style.display = "block";
+        if(wlButtons[0].style.display == "inline") {
+            tNameInps[0].style.width = "58.2%";
+            tNameInps[1].style.width = "58.2%";
+        } else {
+            tNameInps[0].style.width = "100%";
+            tNameInps[1].style.width = "100%";
+
+        }
     } else {
         currentBestOf = "Bo3";
         theOtherBestOf = document.getElementById("bo5Div");
         p1Win3.style.display = "none";
         p2Win3.style.display = "none";
+        if(wlButtons[0].style.display == "inline") {
+            tNameInps[0].style.width = "63%";
+            tNameInps[1].style.width = "63%";
+        } else {
+            tNameInps[0].style.width = "100%";
+            tNameInps[1].style.width = "100%";
+        }
     }
 
     //change the color and background of the buttons
@@ -1216,10 +1303,19 @@ function checkRound() {
         if (roundInp.value.toLocaleUpperCase().includes("Grand".toLocaleUpperCase())) {
             for (let i = 0; i < wlButtons.length; i++) {
                 wlButtons[i].style.display = "inline";
+                if(currentBestOf == "Bo3") {
+                    tNameInps[0].style.width = "63%";
+                    tNameInps[1].style.width = "63%";
+                } else {
+                    tNameInps[0].style.width = "58.2%";
+                    tNameInps[1].style.width = "58.2%";
+                }
             }
         } else {
             for (let i = 0; i < wlButtons.length; i++) {
                 wlButtons[i].style.display = "none";
+                tNameInps[0].style.width = "100%";
+                tNameInps[1].style.width = "100%";
                 deactivateWL();
             }
         }
@@ -1399,7 +1495,6 @@ function changeGamemode() {
             document.getElementById("scoreText"+i).style.display = "block";
         
             document.getElementById('row1-'+i).insertAdjacentElement("afterbegin", document.getElementById('p' + i + 'Info'));
-        
         }
 
         for (let i = 0; i < maxPlayers; i++) {
@@ -1425,62 +1520,101 @@ function changeGamemode() {
     }
 }
 
+function changeWLButtons() {
+    if (currentP1WL == "W") {
+        p1W.style.color = "var(--text1)";
+        p1L.style.color = "var(--text2)";
+        p1W.style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
+        p1L.style.backgroundImage = "var(--bg4)";
+    } else if (currentP1WL == "L") {
+        p1L.style.color = "var(--text1)";
+        p1W.style.color = "var(--text2)";
+        p1L.style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
+        p1W.style.backgroundImage = "var(--bg4)";
+    }
+    if (currentP2WL == "W") {
+        p2W.style.color = "var(--text1)";
+        p2L.style.color = "var(--text2)";
+        p2W.style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
+        p2L.style.backgroundImage = "var(--bg4)";
+    } else if (currentP2WL == "L") {
+        p2L.style.color = "var(--text1)";
+        p2W.style.color = "var(--text2)";
+        p2L.style.backgroundImage = "linear-gradient(to top, #575757, #00000000)";
+        p2W.style.backgroundImage = "var(--bg4)";
+    }
+}
+
 function swap() {
-    //team name
-    const teamStore = tNameInps[0].value;
-    tNameInps[0].value = tNameInps[1].value;
-    tNameInps[1].value = teamStore;
 
     let tempP1Name = p1NameInp.value;
     let tempP1Team = p1TagInp.value;
     let tempP2Name = p2NameInp.value;
     let tempP2Team = p2TagInp.value;
-    let tempP3Name = p3NameInp.value;
-    let tempP3Team = p3TagInp.value;
-    let tempP4Name = p4NameInp.value;
-    let tempP4Team = p4TagInp.value;
 
     p1NameInp.value = tempP2Name;
     p1TagInp.value = tempP2Team;
     p2NameInp.value = tempP1Name;
     p2TagInp.value = tempP1Team;
-    p3NameInp.value = tempP4Name;
-    p3TagInp.value = tempP4Team;
-    p4NameInp.value = tempP3Name;
-    p4TagInp.value = tempP3Team;
 
     changeInputWidth(p1NameInp);
     changeInputWidth(p1TagInp);
     changeInputWidth(p2NameInp);
     changeInputWidth(p2TagInp);
-    changeInputWidth(p3NameInp);
-    changeInputWidth(p3TagInp);
-    changeInputWidth(p4NameInp);
-    changeInputWidth(p4TagInp);
 
     let tempP1Char = charP1;
     let tempP2Char = charP2;
     let tempP1Skin = skinP1;
     let tempP2Skin = skinP2;
-    let tempP3Char = charP3;
-    let tempP4Char = charP4;
-    let tempP3Skin = skinP3;
-    let tempP4Skin = skinP4; 
 
     changeCharacterManual(tempP2Char, 1);
     changeCharacterManual(tempP1Char, 2);
-    changeCharacterManual(tempP4Char, 3);
-    changeCharacterManual(tempP3Char, 4);
+
     charImgChange(charImgP1, charP1, tempP2Skin);
     charImgChange(charImgP2, charP2, tempP1Skin);
-    charImgChange(charImgP3, charP3, tempP4Skin);
-    charImgChange(charImgP4, charP4, tempP3Skin);
 
     skinP1 = tempP2Skin;
     skinP2 = tempP1Skin;
-    skinP3 = tempP4Skin;
-    skinP4 = tempP3Skin;
 
+    if(gamemode == 2) {
+        //team name
+        const teamStore = tNameInps[0].value;
+        tNameInps[0].value = tNameInps[1].value;
+        tNameInps[1].value = teamStore;
+
+        let tempP3Name = p3NameInp.value;
+        let tempP3Team = p3TagInp.value;
+        let tempP4Name = p4NameInp.value;
+        let tempP4Team = p4TagInp.value;
+
+        p3NameInp.value = tempP4Name;
+        p3TagInp.value = tempP4Team;
+        p4NameInp.value = tempP3Name;
+        p4TagInp.value = tempP3Team;
+        
+        changeInputWidth(p3NameInp);
+        changeInputWidth(p3TagInp);
+        changeInputWidth(p4NameInp);
+        changeInputWidth(p4TagInp);
+        
+        let tempP3Char = charP3;
+        let tempP4Char = charP4;
+        let tempP3Skin = skinP3;
+        let tempP4Skin = skinP4;
+        
+        changeCharacterManual(tempP4Char, 3);
+        changeCharacterManual(tempP3Char, 4);
+
+        skinP3 = tempP4Skin;
+        skinP4 = tempP3Skin;
+    }
+
+    if( currentP1WL != "Nada" && currentP2WL != "Nada") {
+        let tempWL = currentP1WL;
+        currentP1WL = currentP2WL;
+        currentP2WL = tempWL;
+        changeWLButtons();
+    }
 
     tempP1Score = checkScore(p1Win1, p1Win2, p1Win3);
     tempP2Score = checkScore(p2Win1, p2Win2, p2Win3);
@@ -1512,6 +1646,7 @@ function clearPlayers() {
     document.getElementById('skinListP1').innerHTML = '';
     document.getElementById('skinListP1Mythra').innerHTML = '';
     document.getElementById('skinSelectorP1').style.opacity = 0;
+    document.getElementById('skinSelectorP1').style.display = 'none';
 
     document.getElementById('p2CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
     charP2 = "Random";
@@ -1520,6 +1655,7 @@ function clearPlayers() {
     document.getElementById('skinListP2').innerHTML = '';
     document.getElementById('skinListP2Mythra').innerHTML = '';
     document.getElementById('skinSelectorP2').style.opacity = 0;
+    document.getElementById('skinSelectorP2').style.display = 'none';
 
     document.getElementById('p3CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
     charP3 = "Random";
@@ -1528,6 +1664,7 @@ function clearPlayers() {
     document.getElementById('skinListP3').innerHTML = '';
     document.getElementById('skinListP3Mythra').innerHTML = '';
     document.getElementById('skinSelectorP3').style.opacity = 0;
+    document.getElementById('skinSelectorP3').style.display = 'none';
 
     document.getElementById('p4CharSelector').setAttribute('src', charPath + '/CSS/Random.png');
     charP4 = "Random";
@@ -1536,6 +1673,7 @@ function clearPlayers() {
     document.getElementById('skinListP4').innerHTML = '';
     document.getElementById('skinListP4Mythra').innerHTML = '';
     document.getElementById('skinSelectorP4').style.opacity = 0;
+    document.getElementById('skinSelectorP4').style.display = 'none';
 
     //clear player scores
     let checks = document.getElementsByClassName("scoreCheck");

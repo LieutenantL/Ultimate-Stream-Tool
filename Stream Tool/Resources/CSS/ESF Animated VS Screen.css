@@ -1,0 +1,435 @@
+@font-face {
+    font-family: "Deansgate";
+    src: url('../Fonts/DeansgateCondensed-Bold.ttf');
+}
+
+@font-face {
+    font-family: "LemonMilk";
+    src: url('../Fonts/LEMONMILK-Medium.otf');
+}
+
+@font-face {
+    font-family: "Smash";
+    src: url('../Fonts/FOT-RodinHimawariPro-UB.otf');
+}
+
+@font-face {
+    font-family: "Coolvetica RG";
+    src: url("../Fonts/coolvetica rg.ttf");
+}
+
+body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: transparent;
+    padding: 0px;
+    margin: 0px;
+    
+    /*text-transform: uppercase;*/
+}
+
+.absol {
+    position: absolute;
+}
+
+.mirror {
+    position: absolute;
+    transform: scaleX(-1);
+}
+
+.singlesClip {
+    width: 1920px;
+    height: 1080px;
+    clip: rect(0px, 1920px, 1080px, 0px);
+}
+.dubsClip {
+    width: 1920px;
+    height: 1080px;
+    clip: rect(100px, 960px, 700px, 0px);
+}
+
+.mirrorP2 {
+    position: absolute;
+    transform: scaleX(-1);
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+}
+
+#backdrop {
+    z-index: 0;
+}
+
+#backdrop1 {
+    z-index: 0;
+}
+#backdrop2 {
+    z-index: 0;
+    left: 960px;
+}
+
+#aniOver {
+    z-index: 6;
+}
+
+#aniOver1 {
+    z-index: 6;
+}
+
+#aniOver2 {
+    z-index: 6;
+    left: 960px;
+}
+
+#overlay {
+    z-index: 6;
+}
+
+#vsOverlay {
+    z-index: -1;
+}
+
+.colorBG {
+    opacity: 0;
+}
+
+#BG {
+    z-index: -1;
+}
+
+#front {
+    z-index: 6;
+}
+
+#behind {
+    z-index: 0;
+}
+
+#bgImgs {
+    filter: grayscale(.7);
+    z-index: -3;
+    opacity: 0;
+}
+
+#left {
+    clip: rect(0px, 960px, 1080px, 0px);
+}
+#right {
+    clip: rect(0px, 1920px, 1080px, 960px);
+}
+
+#tournamentInfo {
+    top: 7%;
+    left: 42%;
+}
+
+#tournamentLogo {
+    width: 300px;
+    height: 300px;
+}
+
+#tournamentRound {
+    width: 700px;
+    top: 35%;
+    left: 610px;
+    font-family: "Smash";
+    text-align: center;
+    color: #414141;
+}
+
+#textBGP1 {
+    bottom: 80px;
+    left: 0px;
+    opacity: 0;
+}
+
+#textBGP2 {
+    bottom: 80px;
+    right: -2px;
+    opacity: 0;
+}
+
+
+.character {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    object-fit: scale-down;
+}
+
+.chara {
+    opacity: 1;
+}
+
+#charP1, #charP2 {
+    clip: rect(0px, 1920px, 1080px, 0px);
+    z-index: 3;
+}
+#charP3, #charP4 {
+    clip: rect(540px, 960px, 1080px, 0px);
+    z-index: 3;
+}
+
+#topRow {
+    position: absolute;
+    width: 1920px;
+}
+#botRow {
+    position: absolute;
+    width: 1920px;
+    top: 410px;
+}
+
+
+.wrappers {
+    position: absolute;
+    font-family: "Smash";
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    z-index: 7;
+}
+
+.wrappersSingles {
+    width: 960px;
+    height: 100px;
+    bottom: 0px;
+    line-height: 70px;
+}
+.wrappersDoubles {
+    width: 300px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p1WSingles {
+    left: -140px;
+}
+.p2WSingles {
+    right: -140px;
+}
+
+.p1WDub {
+    top: 50px;
+    left: 40px;
+    transform: rotate(-5deg);
+}
+.p2WDub {
+    top: 50px;
+    right: 40px;
+    transform: rotate(5deg);
+}
+#p3Wrapper {
+    bottom: 50px;
+    left: 40px;
+    transform: rotate(5deg);
+}
+#p4Wrapper {
+    bottom: 50px;
+    right: 40px;
+    transform: rotate(-5deg);
+}
+
+.name {
+    font-family: "Coolvetica RG";
+    color: #f7f9f7;
+    opacity: 1;
+    text-shadow:
+        -1px -1px 0 #053b0c,
+        1px -1px 0 #053b0c,
+        -1px 1px 0 #053b0c,
+        1px 1px 0 #053b0c
+}
+
+.tag {
+    font-family: "Coolvetica RG";
+    text-transform: uppercase;
+    color: #053b0c;
+    opacity: 1;
+    text-shadow:
+        -1px -1px 0 #f7f9f7,
+        1px -1px 0 #f7f9f7,
+        -1px 1px 0 #f7f9f7,
+        1px 1px 0 #f7f9f7
+}
+
+.sideTexts {
+    width: 1200px;
+    top: 450px;
+    line-height: 300px;
+    transform: rotate(60.5deg);
+    font-family: "Smash";
+    color: rgb(19, 153, 75);
+    opacity: .8;
+}
+
+#p1Side {
+    left: -425px;
+}
+
+#p2Side {
+    transform: rotate(-60.5deg);
+    right: -425px;
+}
+
+.teamName {
+    position: absolute;
+    width: 690px;
+    height: 90px;
+    top: 495px;
+    font-family: "Smash";
+    white-space: nowrap;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#teamNameL {
+    left: 25px;
+}
+#teamNameR {
+    right: 25px;
+}
+
+
+.roundInfo {
+    position: absolute;
+    text-align: center;
+    font-family: "Deansgate";
+    white-space: nowrap;
+}
+
+#round {
+    width: 700px;
+    height: 100px;
+    left: 610px;
+    top: 120px;
+    color: rgb(65, 65, 65);
+    line-height: 75px;
+}
+
+#tournament {
+    font-family: "LemonMilk";
+    width: 700px;
+    height: 90px;
+    left: 610px;
+    top: 25px;
+    color: rgb(65, 65, 65);
+    line-height: 90px;
+}
+
+
+
+#casterInfo {
+    position: absolute;
+    width: 1920px;
+    opacity: 0;
+}
+
+.caster {
+    position: absolute;
+    width: 300px;
+    height: 70px;
+    top: 130px;
+    text-align: center;
+    font-family: "Deansgate";
+    color: black;
+    line-height: 70px;
+    white-space: nowrap;
+}
+
+#caster1 {
+    left: 765px;
+}
+
+#caster2 {
+    right: 765px;
+}
+
+
+.socialBox {
+    position: absolute;
+    width: 170px;
+    height: 30px;
+    top: 162px;
+    text-align: center;
+    font-family: "Deansgate";
+    color: rgb(65, 65, 65);
+    line-height: 26px;
+    white-space: nowrap;
+}
+.twitterIcon {
+    height: 19px;
+    width: 19px;
+    fill: rgb(65, 65, 65);
+    transform: translate(0px, 2px);
+}
+.twitchIcon {
+    height: 17px;
+    width: 17px;
+    fill: rgb(65, 65, 65);
+    transform: translate(0px, 1px);
+}
+
+#twitter1Wrapper, #twitter2Wrapper {
+    opacity: 0;
+}
+#twitch1Wrapper, #twitch2Wrapper {
+    opacity: 0;
+}
+
+#twitter1Wrapper, #twitch1Wrapper {
+    left: 765px;
+}
+#twitter2Wrapper, #twitch2Wrapper {
+    right: 765px;
+}
+
+
+
+#scores {
+    position: absolute;
+    width: 1920px;
+    opacity: 0;
+}
+
+.scoreTick {
+    position: absolute;
+    top: 212px;
+    fill: #414141;
+}
+
+#scoreL-1 {
+    left: 924px;
+}
+#scoreL-2 {
+    left: 896px;
+}
+#scoreL-3 {
+    left: 866px;
+}
+
+#scoreR-1 {
+    right: 924px;
+    transform: scaleX(-1);
+}
+#scoreR-2 {
+    right: 896px;
+    transform: scaleX(-1);
+}
+#scoreR-3 {
+    right: 866px;
+    transform: scaleX(-1);
+}
+
+#scoreBorder {
+    top: 209px;
+    left: 862px;
+}

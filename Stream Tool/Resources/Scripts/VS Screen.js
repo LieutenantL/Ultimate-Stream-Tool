@@ -10,9 +10,9 @@ const introDelay = .5; //all animations will get this delay when the html loads 
 //max text sizes (used when resizing back)
 const playerSize = '90px';
 const tagSize = '50px';
-const teamSize = '80px';
+const teamSize = '70px';
 const roundSize = '60px';
-const tournamentSize = '78px';
+let tournamentSize = '78px';
 const casterSize = '25px';
 const twitterSize = '20px';
 
@@ -42,6 +42,7 @@ let maxPlayers = 2; //will change when doubles comes
 const maxSides = 2;
 
 let startup = true;
+let gameChange = false;
 
 
 //next, global variables for the html elements
@@ -53,7 +54,6 @@ const pChara = document.getElementsByClassName("chara");
 const pChar = document.getElementsByClassName("char");
 const pTrail = document.getElementsByClassName("trail");
 const pBG = document.getElementsByClassName("bgImg");
-//const pBG = document.getElementsByClassName("bgVid");
 const scoreImg = document.getElementsByClassName("scoreTick");
 const colorBG = document.getElementsByClassName("colorBG");
 const textBG = document.getElementsByClassName("textBG");
@@ -137,6 +137,7 @@ async function getData(scInfo) {
 		//if this isnt a singles match, rearrange stuff
 		if (gamemode != 1) {
 			changeGM(gamemode);
+			gameChange = true;
 		}
 		//save this variable so we know the next time it gets changed
 		gamemodePrev = gamemode;
@@ -153,7 +154,7 @@ async function getData(scInfo) {
 		for (let i = 0; i < maxPlayers; i++) {
 
 			//lets start simple with the player names & tags 
-			updatePlayerName(i, player[i].name, player[i].tag);
+			updatePlayerName(i, player[i].name, player[i].tag, gamemode);
 
 			//fade in the player text
 			fadeIn(pWrapper[i], introDelay+.15);
@@ -246,6 +247,7 @@ async function getData(scInfo) {
 
 
 		startup = false; //next time we run this function, it will skip all we just did
+		gameChange = false;
 	}
 
 	//now things that will happen constantly
@@ -260,11 +262,18 @@ async function getData(scInfo) {
 		//of course, check if the gamemode has changed
 		if (gamemodePrev != gamemode) {
 			changeGM(gamemode);	
+			gameChange = true;
 			//calling updateColor here so the text background gets added
 			for (let i = 0; i < maxSides; i++) {
 				updateColor(colorBG[i], textBG[i], color[i], i, gamemode);
+
 			}
+
 			gamemodePrev = gamemode;
+			fadeOut(tournamentEL, () => {
+				updateText(tournamentEL, tournamentName, tournamentSize);
+				fadeIn(tournamentEL, .2);
+			});
 		}
 
 
@@ -334,7 +343,7 @@ async function getData(scInfo) {
 				//fade out the player's text
 				fadeOut(pWrapper[i], () => {
 					//now that nobody is seeing it, change the content of the texts!
-					updatePlayerName(i, player[i].name, player[i].tag);
+					updatePlayerName(i, player[i].name, player[i].tag, gamemode);
 					//and fade the texts back in
 					fadeIn(pWrapper[i], .2);
 				});
@@ -342,7 +351,7 @@ async function getData(scInfo) {
 
 
 			//player character, skin and background change
-			if (pCharPrev[i] != player[i].character || pSkinPrev[i] != player[i].skin) {
+			if (pCharPrev[i] != player[i].character || pSkinPrev[i] != player[i].skin || gameChange) {
 				
 				//move and fade out the character
 				charaFadeOut(pChara[i], () => {
@@ -424,6 +433,8 @@ async function getData(scInfo) {
 			}
 
 		}
+
+		gameChange = false;
 	}
 }
 
@@ -450,12 +461,14 @@ function changeGM(gm) {
 		textBG[1].style.right = "-10px";
 
 		//move the match info to the center of the screen
-		document.getElementById("roundInfo").style.top = "434px";
+		document.getElementById("roundInfo").style.top = "425px";
+		document.getElementById("round").style.top = "110px";
+		tournamentSize = '70px';
 		document.getElementById("casterInfo").style.top = "417px";
 		document.getElementById("scores").style.top = "415px";
 
 		//reposition the top characters (bot ones are already positioned)
-		document.getElementById("topRow").style.top = "-180px";
+		document.getElementById("topRow").style.top = "-200px";
 		//change the clip mask
 		document.getElementById("clipP1").classList.remove("singlesClip");
 		document.getElementById("clipP1").classList.add("dubsClip");
@@ -485,10 +498,12 @@ function changeGM(gm) {
 
 		//move everything back to where it was
 		for (let i = 0; i < maxSides; i++) {
-			textBG[i].style.bottom = "0px";
+			textBG[i].style.bottom = "80px";
 		}
 		textBG[1].style.right = "-2px";
 		document.getElementById("roundInfo").style.top = "0px";
+		document.getElementById("round").style.top = "120px";
+		tournamentSize = '78px';
 		document.getElementById("casterInfo").style.top = "0px";
 		document.getElementById("scores").style.top = "0px";
 		document.getElementById("topRow").style.top = "0px";
@@ -569,28 +584,21 @@ function getHexColor(color) {
 //background change
 function updateBG(imgEL, pCharacter, pSkin, charInfo) {
 
-/*	if (startup) {
-		//if the video cant be found, show aethereal gates
-		vidEL.addEventListener("error", () => {
-			vidEL.src = 'Resources/Backgrounds/Default.webm'
-			//vidEL.src = 'Resources/Backgrounds/PS2.png'
-		});
-	}
-*/
     if (startup) {
 		//if the video cant be found, show aethereal gates
 		imgEL.addEventListener("error", () => {
 			//imgEL.src = 'Resources/Backgrounds/Battlefield.png'
-			imgEL.src = 'Resources/Backgrounds/PS2.jpg'
+			imgEL.src = 'Resources/Backgrounds/FinalDestination.jpg'
 		});
 	}
 
-
-
 	//imgEL.src = 'Resources/Backgrounds/PS2.png';
 
+	if (maxPlayers == 4) {
+		imgEL.src = "Resources/Backgrounds/FinalDestination.jpg";
+	}
 	//change the BG path depending on the character
-	if (pCharacter == "Pokemon Trainer" || pCharacter == "Incineroar") {
+	else if (pCharacter == "Pokemon Trainer" || pCharacter == "Incineroar") {
 		imgEL.src = "Resources/Backgrounds/PS2.jpg";
 	}
 	else if (pCharacter == "Ness" || pCharacter == "Lucas") {
@@ -750,10 +758,18 @@ function updateSocial(mainSocial, mainText, mainWrapper, otherSocial, otherWrapp
 
 
 //player text change
-function updatePlayerName(pNum, name, tag) {
-	pName[pNum].style.fontSize = playerSize; //set original text size
+function updatePlayerName(pNum, name, tag, gamemode) {
+	if (gamemode == 2) {
+		pName[pNum].style.fontSize = '45px'; //set original text size
+	} else {
+		pName[pNum].style.fontSize = playerSize; //set original text size
+	}
 	pName[pNum].textContent = name; //change the actual text
-	pTag[pNum].style.fontSize = tagSize;
+	if (gamemode == 2) { 
+		pTag[pNum].style.fontSize = '24px';
+	} else {
+		pTag[pNum].style.fontSize = tagSize;
+	}
 	pTag[pNum].textContent = tag;
 
 	resizeText(pWrapper[pNum]); //resize if it overflows
@@ -884,6 +900,9 @@ function updateChar(pCharacter, pSkin, color, pNum, charInfo, gamemode, startup 
 
 	//change the image path depending on the character and skin
 	charEL.src = charPath + "Portraits/" + pCharacter + '/' + pSkin + '.png';
+	if(pCharacter == "Random") {
+		charEL.src = charPath + "Portraits/Random/Random" + (pNum+1) + ".png";
+	}
 
 	//             x, y, scale
 	const charPos = [0, 0, 1];
@@ -910,12 +929,23 @@ function updateChar(pCharacter, pSkin, color, pNum, charInfo, gamemode, startup 
 		//if doubles, we need to move it up a bit
 		if (gamemode == 2) {
 			charPos[1] = -125;
+			charPos[2] = .2;
 		} else {
 			charPos[1] = 0;
+			charPos[2] = .8;
 		}
-		charPos[2] = .8;
 		trailEL.src = charPath + 'Portraits/Trails/Red.png';
 	}
+
+	if(gamemode == 2) {
+		charPos[0] = -350;
+		charPos[1] = -70;
+		charPos[2] = .5;
+		if (pCharacter == "Random") {
+			charPos[1] = -100;
+			charPos[2] = 1;
+		}
+	} 
 
 	//to position the character
 	charEL.style.left = charPos[0] + "px";
