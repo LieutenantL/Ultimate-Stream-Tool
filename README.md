@@ -51,4 +51,4 @@ If you have any suggestions for me, you can contact me on Twitter [@Lieutenant_L
 
 ---
 
-Resources: [The spriters resource](https://www.spriters-resource.com/nintendo_switch/supersmashbrosultimate/)
+Resources: [The spriters resource](https://www.spriters-resource.com/nintendo_switch/supersmashbrosultimate/), Character Animations by [Shifter](https://twitter.com/WayShifter)
