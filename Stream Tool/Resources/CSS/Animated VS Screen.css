@@ -36,7 +36,6 @@ body {
 .singlesClip {
     width: 1920px;
     height: 1080px;
-    clip: rect(0px, 960px, 1080px, 0px);
 }
 .dubsClip {
     width: 1920px;
@@ -51,25 +50,6 @@ body {
     right: 0px;
     z-index: 3;
 }
-
-/*
-#bgVids {
-    filter: grayscale(.8);
-}
-
-#vidBGP1 {
-    clip: rect(0px, 960px, 1080px, 0px);
-}
-#vidBGP2 {
-    clip: rect(0px, 1920px, 1080px, 960px);
-}
-#vidBGP3 {
-    clip: rect(540px, 960px, 1080px, 0px);
-}
-#vidBGP4 {
-    clip: rect(540px, 1920px, 1080px, 960px);
-}
-*/
 
 #bgImgs {
     filter: grayscale(.7);
@@ -91,15 +71,15 @@ body {
 
 
 #textBGP1 {
-    bottom: 80px;
+    bottom: -30px;
     left: 0px;
-    opacity: 0;
+    z-index: 14;
 }
 
 #textBGP2 {
-    bottom: 80px;
+    bottom: -30px;
     right: -2px;
-    opacity: 0;
+    z-index: 14;
 }
 
 
@@ -115,22 +95,15 @@ body {
 }
 
 #charP1, #charP2 {
-    clip: rect(0px, 960px, 1080px, 0px);
     z-index: 3;
 }
 #charP2 {
     z-index: 4;
 }
-/* #charP2 {
-    clip: rect(0px, 1920px, 1080px, 960px);
-} */
 #charP3, #charP4 {
     clip: rect(540px, 960px, 1080px, 0px);
     z-index: 3;
 }
-/* #charP4 {
-    clip: rect(540px, 1920px, 1080px, 960px);
-} */
 
 #topRow {
     position: absolute;
@@ -149,14 +122,15 @@ body {
     text-align: center;
     white-space: nowrap;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
-    opacity: 0;
+    opacity: 1;
+    z-index: 15;
 }
 
 .wrappersSingles {
     transform: rotate(-3deg);
     width: 940px;
     height: 120px;
-    bottom: 170px;
+    bottom: 60px;
     line-height: 90px;
 }
 .wrappersDoubles {
@@ -197,12 +171,10 @@ body {
 
 .name {
     color: white;
-    opacity: 0;
 }
 
 .tag {
     color: lightgray;
-    opacity: 0;
 }
 
 
