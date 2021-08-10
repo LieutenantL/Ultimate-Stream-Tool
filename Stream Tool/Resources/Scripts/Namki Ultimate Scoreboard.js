@@ -386,7 +386,10 @@ async function getData(scInfo) {
 			
 			//the [W] and [L] status for grand finals
 			if (wlPrev[i] != wl[i]) {
-				const movement = (i % 2 == 0) ? -pMove : pMove;
+				const movement = (i % 2 == 0) ? -pMove : -pMove;
+				if(gamemode!=1) {
+					movement = (i % 2 == 0) ? -pMove : pMove;
+				}
 				//move it away!
 				fadeOutWL(wlImg[i], movement, gamemode, () => {
 					//change the thing!

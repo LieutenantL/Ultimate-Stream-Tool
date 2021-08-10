@@ -218,6 +218,7 @@ body {
 #casterInfo {
     position: absolute;
     width: 1920px;
+    opacity: 0;
 }
 
 .caster {
