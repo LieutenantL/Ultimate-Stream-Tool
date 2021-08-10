@@ -1,11 +1,12 @@
-![preview](https://i.imgur.com/xB2h476.png)
+![preview](https://i.imgur.com/N4CCAiq.png)
 # Ultimate Stream Tool
 
 ## Features
 - Easy and fast setup using a browser source. Drag and drop!
-- Handy interface to quickly change everything you need, like player names, characters, scores, round, casters...
-- Customizable Player Presets to setup your match in no time!
-- Now with 2v2 support!
+- Handy [interface](https://i.imgur.com/xB2h476.png) to quickly change everything you need, like player names, characters, scores, round, casters...
+- Customizable [Player Presets](https://imgur.com/a/oT8uh5a) to setup your match in no time!
+- Now with [2v2](https://imgur.com/a/Ip3Ge3h) support!
+- A "[VS Screen](https://imgur.com/OMIo4q3)" to display while in between matches or while the game loads!
 - This is **not** a [Stream Control](http://farpnut.net/StreamControl) clone. It doesn't have anything to do with it, everything is custom made.
 
 ---
@@ -46,6 +47,8 @@ Yes, the instructions above are enough, but we can do better. **All of this is o
 
 ### Closing notes
 This project is a heavily modified off of [Readek's](https://twitter.com/Readeku) [RoA Stream Tool](https://github.com/Readek/RoA-Stream-Tool), so many thanks to them :)
+
+2v2 is currently only supported on the non-animated base VS Screen and Scoreboard Overlay.
 
 Regarding Kazuya's character select picture, I am waiting for the last character to be released to replace the image. It still works, just doesn't have a correct image!
 
