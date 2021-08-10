@@ -47,7 +47,9 @@ Yes, the instructions above are enough, but we can do better. **All of this is o
 ### Closing notes
 This project is a heavily modified off of [Readek's](https://twitter.com/Readeku) [RoA Stream Tool](https://github.com/Readek/RoA-Stream-Tool), so many thanks to them :)
 
-Regarding Kazuya's character select picture, I am waiting for the last character to be released to replace the image. It still works, just doesnt have a correct image!
+Regarding Kazuya's character select picture, I am waiting for the last character to be released to replace the image. It still works, just doesn't have a correct image!
+
+If you are having trouble downloading/unzipping the project, I have the Stream tool hosted on [Google Drive](https://drive.google.com/drive/folders/1_6SgIsUcMQdlOSn2ObJpa2k2BJHLk1YI)
 
 If you have any suggestions for me, you can contact me on Twitter [@Lieutenant_L5](https://twitter.com/lieutenant_l5)!
 
