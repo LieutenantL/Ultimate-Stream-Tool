@@ -58,4 +58,6 @@ If you have any suggestions for me, you can contact me on Twitter [@Lieutenant_L
 
 ---
 
-Resources: [The spriters resource](https://www.spriters-resource.com/nintendo_switch/supersmashbrosultimate/), Character Animations by [Shifter](https://twitter.com/WayShifter)
+[French Translation](https://docs.google.com/document/d/1JURl3Muby7b8WUy0RRLge6-Bn0VXHrOo/edit?usp=sharing&ouid=105808034193998201742&rtpof=true&sd=true) by [Vicnin](https://twitter.com/VicninSSB)
+
+Resources: Scene Assets by [Readek](https://twitter.com/Readeku), [The spriters resource](https://www.spriters-resource.com/nintendo_switch/supersmashbrosultimate/), Character Animations by [Shifter](https://twitter.com/WayShifter)
