@@ -1,9 +1,18 @@
 {
-    "name": "Lt. L",
-    "tag": "",
-    "characters": [
-        {
-            "character": "Terry",  "skin": "Terry4"
-        }
-    ]
+  "name": "Lt. L",
+  "tag": "CSU",
+  "characters": [
+    {
+      "character": "Terry",
+      "skin": "Terry4"
+    },
+    {
+      "character": "Incineroar",
+      "skin": "Incineroar8"
+    },
+    {
+      "character": "Pyra",
+      "skin": "Mythra7"
+    }
+  ]
 }

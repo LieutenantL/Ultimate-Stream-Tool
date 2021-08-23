@@ -1036,7 +1036,11 @@ function updateChar(pNum, pCharacter, pSkin, startup=false) {
 	} else if (pCharacter == "Steve") {
 		if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
 			vidEL.src = webmPath + 'Steve (Alex).webm';
-		} else {
+		} else if (pSkin.substring(pSkin.length-1, pSkin.length) == 7) {
+            vidEL.src = webmPath + 'Steve (Zombie).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 8) {
+            vidEL.src = webmPath + 'Steve (Enderman).webm';
+        } else {
 			vidEL.src = webmPath + 'Steve.webm';
 		}
 	} else if (pCharacter == "Sephiroth") {
@@ -1091,6 +1095,24 @@ function updateChar(pNum, pCharacter, pSkin, startup=false) {
 		} else {
 			vidEL.src = webmPath + 'Byleth (F).webm';
 		}
+	} else if (pCharacter == "Bowser Jr") {
+        if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
+            vidEL.src = webmPath + 'Bowser Jr (Larry).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 3) {
+            vidEL.src = webmPath + 'Bowser Jr (Roy).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 4) {
+            vidEL.src = webmPath + 'Bowser Jr (Wendy).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 5) {
+            vidEL.src = webmPath + 'Bowser Jr (Iggy).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 6) {
+            vidEL.src = webmPath + 'Bowser Jr (Morton).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 7) {
+            vidEL.src = webmPath + 'Bowser Jr (Lemmy).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 8) {
+            vidEL.src = webmPath + 'Bowser Jr (Ludwig).webm';
+        } else {
+            vidEL.src = webmPath + 'Bowser Jr.webm';
+        }
 	} else {
 		//actual video path change
 		vidEL.src = charPath + 'Webm/' + pCharacter + '.webm';
