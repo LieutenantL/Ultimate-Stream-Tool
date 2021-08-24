@@ -969,7 +969,7 @@ function updateChar(pNum, pCharacter, pSkin, startup=false) {
 	if (startup) {
 		//if the video cant be found, show aethereal gates
 		vidEL.addEventListener("error", () => {
-			vidEL.src = webmPath + 'Mario.webm';
+			vidEL.src = webmPath + 'Random.webm';
 		});
 	}
 
