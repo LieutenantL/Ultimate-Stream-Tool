@@ -10,16 +10,16 @@ const inc = remote.require('./index.js');
 //const { dialog } = require('electron');
 
 //path variables used when developing
-const mainPath = path.join(__dirname, '..', '..', 'Stream Tool', 'Resources', 'Texts');
-const charPath = path.join(__dirname, '..', '..', 'Stream Tool', 'Resources', 'Characters');
+// const mainPath = path.join(__dirname, '..', '..', 'Stream Tool', 'Resources', 'Texts');
+// const charPath = path.join(__dirname, '..', '..', 'Stream Tool', 'Resources', 'Characters');
 
 //change to these paths when building the executable
 //Linux (appimage)
 /* const textPath = path.resolve('.', 'Resources', 'Texts');
 const charPath = path.resolve('.', 'Resources', 'Characters'); */
 //Windows (if building a portable exe)
-// const mainPath = path.resolve(process.env.PORTABLE_EXECUTABLE_DIR, 'Resources', 'Texts');
-// const charPath = path.resolve(process.env.PORTABLE_EXECUTABLE_DIR, 'Resources', 'Characters');
+const mainPath = path.resolve(process.env.PORTABLE_EXECUTABLE_DIR, 'Resources', 'Texts');
+const charPath = path.resolve(process.env.PORTABLE_EXECUTABLE_DIR, 'Resources', 'Characters');
 
 //yes we all like global variables
 const colorList = getJson(mainPath + "/InterfaceInfo");
@@ -884,6 +884,34 @@ function addSkinIcons(pNum) {
         }
     }
 
+    
+
+    // let PR = getJson(mainPath + "/PR");
+    // for(let i = 0; i < PR.player.length; i++) {
+    //     if(PR.player[i].name == pNameInps[pNum-1].value) {
+    //         let newImg = document.createElement('img');
+    //         newImg.className = "skinIcon";
+    //         newImg.id = PR.player[i].skin;
+    //         newImg.title = PR.player.skin;
+
+    //         if (pNum == 1) {
+    //             newImg.setAttribute('src', charPath + '/Stock Icons/'+charP1+'/'+PR.player[i].skin.value+'.png');
+    //             newImg.addEventListener("click", changeSkinP1);
+    //         } else if (pNum == 2) {
+    //             newImg.setAttribute('src', charPath + '/Stock Icons/'+charP2+'/'+PR.player[i].skin.value+'.png');
+    //             newImg.addEventListener("click", changeSkinP2);
+    //         } else if (pNum == 3){
+    //             newImg.setAttribute('src', charPath + '/Stock Icons/'+charP3+'/'+PR.player[i].skin.value+'.png');
+    //             newImg.addEventListener("click", changeSkinP3);
+    //         } else {
+    //             newImg.setAttribute('src', charPath + '/Stock Icons/'+charP4+'/'+PR.player[i].skin.value+'.png');
+    //             newImg.addEventListener("click", changeSkinP4);
+    //         }
+
+    //         document.getElementById('skinListP'+pNum).appendChild(newImg);
+    //     }
+    // }
+
     //if the list only has 1 skin or none, hide the skin list
     if (document.getElementById('skinListP'+pNum).children.length <= 1) {
         document.getElementById('skinSelectorP'+pNum).style.display = 'none';
@@ -1121,10 +1149,14 @@ function checkPlayerPreset() {
                     //actual image
                     const charImg = document.createElement('img');
                     charImg.className = "pfCharImg";
-                    charImg.setAttribute('src', charPath+'/Portraits/'+char.character+'/'+char.skin+'.png');
+                    // charImg.setAttribute('src', charPath+'/Portraits/'+char.character+'/'+char.skin+'.png');
+                    charImg.setAttribute('src', charPath+'/HQ Stock Icons/'+char.character+'/'+char.skin+'.png');
                     
                     //we have to position it
-                    positionChar(char.character, char.skin, charImg);
+                    // positionChar(char.character, char.skin, charImg);
+                    charImg.style.left = "0px";
+                    charImg.style.top = "-2px";
+                    charImg.style.transform = "scale(.8)";
 
                     //and add it to the mask
                     charImgBox.appendChild(charImg);
@@ -1856,8 +1888,8 @@ function writeScoreboard() {
     fs.writeFileSync(mainPath + "/Simple Texts/Team 1.txt", tNameInps[0].value);
     fs.writeFileSync(mainPath + "/Simple Texts/Team 2.txt", tNameInps[1].value);
 
-    fs.writeFileSync(textPath + "/Simple Texts/Score L.txt", checkScore(p1Win1, p1Win2, p1Win3));
-    fs.writeFileSync(textPath + "/Simple Texts/Score R.txt", checkScore(p2Win1, p2Win2, p2Win3));
+    fs.writeFileSync(mainPath + "/Simple Texts/Score L.txt", checkScore(p1Win1, p1Win2, p1Win3));
+    fs.writeFileSync(mainPath + "/Simple Texts/Score R.txt", checkScore(p2Win1, p2Win2, p2Win3));
 
     fs.writeFileSync(mainPath + "/Simple Texts/Caster 1 Name.txt", document.getElementById('cName1').value);
     fs.writeFileSync(mainPath + "/Simple Texts/Caster 1 Twitter.txt", document.getElementById('cTwitter1').value);
