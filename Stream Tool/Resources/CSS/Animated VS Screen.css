@@ -3,16 +3,6 @@
     src: url('../Fonts/DeansgateCondensed-Bold.ttf');
 }
 
-@font-face {
-    font-family: "LemonMilk";
-    src: url('../Fonts/LEMONMILK-Medium.otf');
-}
-
-@font-face {
-    font-family: "Smash";
-    src: url('../Fonts/FOT-RodinHimawariPro-UB.otf');
-}
-
 body {
     width: 1920px;
     height: 1080px;
@@ -20,7 +10,6 @@ body {
     background: transparent;
     padding: 0px;
     margin: 0px;
-    /*text-transform: uppercase;*/
 }
 
 
@@ -118,7 +107,7 @@ body {
 
 .wrappers {
     position: absolute;
-    font-family: "Smash";
+    font-family: "Deansgate";
     text-align: center;
     white-space: nowrap;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
@@ -183,7 +172,7 @@ body {
     width: 690px;
     height: 90px;
     top: 495px;
-    font-family: "Smash";
+    font-family: "Deansgate";
     white-space: nowrap;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
     opacity: 0;
@@ -209,19 +198,18 @@ body {
 }
 
 #round {
-    width: 700px;
+    width: 420px;
     height: 100px;
-    left: 610px;
+    left: 750px;
     top: 120px;
     color: rgb(65, 65, 65);
     line-height: 75px;
 }
 
 #tournament {
-    font-family: "LemonMilk";
-    width: 700px;
-    height: 90px;
-    left: 610px;
+    width: 640px;
+    height: 120px;
+    left: 640px;
     top: 25px;
     color: rgb(65, 65, 65);
     line-height: 90px;
