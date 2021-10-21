@@ -21,11 +21,14 @@ const pCharInfo = [];
 
 //the characters image file path will change depending if they're workshop or not
 let charPath;
+const mainPath = "Resources/Texts/";
 const charPathBase = "Resources/Characters/";
 const charPathWork = "Resources/Characters/_Workshop/";
 
 //color list will be stored here on startup
 let colorList;
+
+// let prList;
 
 //to avoid the code constantly running the same method over and over
 const pCharPrev = [], pSkinPrev = [], scorePrev = [], colorPrev = [];
@@ -45,6 +48,7 @@ let startup = true;
 
 let complete = false;
 
+let ditto = false;
 
 //next, global variables for the html elements
 const body = document.body;
@@ -52,6 +56,7 @@ const pWrapper = document.getElementsByClassName("wrappers");
 const pSide = document.getElementsByClassName("sideTexts");
 const pTag = document.getElementsByClassName("tag");
 const pName = document.getElementsByClassName("name");
+const pSponsor = document.getElementsByClassName("sponsor");
 // const pSideTag = document.getElementsByClassName("sideTag");
 // const pSideName = document.getElementsByClassName("sideName");
 const teamNames = document.getElementsByClassName("teamName");
@@ -73,8 +78,9 @@ const twitchWrEL = document.getElementsByClassName("twitchWrapper");
 const behind = document.getElementById("behind");
 const front = document.getElementById("front");
 const BG = document.getElementById("BG");
+//const overlayVid = document.getElementById("overlayVid");
 
-var id, idTimeout;
+var id, idTimeout, idTimeout2;
 var idTime, idInt = null;
 
 /* script begin */
@@ -129,6 +135,8 @@ async function getData(scInfo) {
 		//initialize the colors list
 		colorList = await getColorInfo();
 
+		//initialize PR list
+		// prList = await getPRInfo();
 
 		//if this isnt a singles match, rearrange stuff
 		if (gamemode != 1) {
@@ -144,6 +152,12 @@ async function getData(scInfo) {
 			pCharInfo[i] = await getCharInfo(player[i].character);
 		}
 
+		//determine Ken/Ryu Mirror Match
+		if(player[0].character == "Ken" || player[0].character == "Ryu") {
+			if(player[1].character == "Ken" || player[1].character == "Ryu") {
+				ditto = true;
+			}
+		}
 
 		// now the real part begins
 		for (let i = 0; i < maxPlayers; i++) {
@@ -157,7 +171,7 @@ async function getData(scInfo) {
 
 			//change the player's character image, and position it
 			//updateChar(player[i].character, player[i].skin, color[i%2], i, pCharInfo[i], gamemode, startup)
-			updateChar(i, player[i].character, player[i].skin, startup);
+			updateChar(i, player[i].name, player[i].character, player[i].skin, startup);
 			//character will fade in when the image finishes loading
 
 			//save character info so we change them later if different
@@ -167,6 +181,8 @@ async function getData(scInfo) {
 
 			//set the character backgrounds
 			//updateBG(pBG[i], player[i].character, player[i].skin, pCharInfo[i]);	
+
+			// updatePR(i, player[i].tag, player[i].name);
 
 		}
 
@@ -185,26 +201,12 @@ async function getData(scInfo) {
 			colorPrev[i] = color[i];
 
 			//initialize the score ticks
-			updateScore(i, score[i], color[i]);
+			// updateScore(i, score[i], color[i]);
 			scorePrev[i] = score[i];
 
 		}
 
 
-		//if the scores for both sides are 0, hide the thing
-		if (score[0] == 0 && score[1] == 0) {
-			scoreOverlay.style.opacity = 0;
-		}
-
-
-		//lets set the initial state of the score border
-		if (bestOf == "Bo5") {
-			scoreBorder.src = "Resources/Overlay/VS Screen/Score Border Bo5.png";
-		} else {
-			scoreBorder.src = "Resources/Overlay/VS Screen/Score Border Bo3.png";
-			scoreImg[2].style.opacity = 0;
-			scoreImg[5].style.opacity = 0;
-		}
 		bestOfPrev = bestOf;
 
 
@@ -270,7 +272,7 @@ async function getData(scInfo) {
 			}
 		}, socialInterval);
 
-		//idTimeout = setTimeout( bodyFadeOut, 6500);
+		idTimeout = setTimeout( bodyFadeOut, 6500);
 
 		startup = false; //next time we run this function, it will skip all we just did
 	}
@@ -306,15 +308,12 @@ async function getData(scInfo) {
 				if (gamemode == 2) {
 					colorTrail(pTrail[i+2], pCharPrev[i+2], pSkinPrev[i+2], color[i], pCharInfo[i+2]);
 				}
-				updateScore(i, score[i], color[i]);
+				// updateScore(i, score[i], color[i]);
 				colorPrev[i] = color[i];
 			}
 
 			//check if the scores changed
 			if (scorePrev[i] != score[i]) {
-
-				//update the thing
-				updateScore(i, score[i], color[i]);
 
 				//if the scores for both sides are 0, hide the thing
 				if (score[0] == 0 && score[1] == 0) {
@@ -353,6 +352,12 @@ async function getData(scInfo) {
 			}
 		}
 
+		ditto = false;
+		if(player[0].character == "Ken" || player[0].character == "Ryu") {
+			if(player[1].character == "Ken" || player[1].character == "Ryu") {
+				ditto = true;
+			}
+		}
 
 		for (let i = 0; i < maxPlayers; i++) {
 
@@ -375,7 +380,7 @@ async function getData(scInfo) {
 				charaFadeOut(pChara[i], () => {
 					//update the character image and trail, and also storing its scale for later
 					//updateChar(player[i].character, player[i].skin, color[i%2], i, pCharInfo[i], gamemode);
-					updateChar(i, player[i].character, player[i].skin);
+					updateChar(i, player[i].name, player[i].character, player[i].skin);
 					
 					//will fade back in when the images load
 				});
@@ -390,15 +395,6 @@ async function getData(scInfo) {
 
 		//best of check
 		if (bestOfPrev != bestOf) {
-			if (bestOf == "Bo5") {
-				scoreImg[2].style.opacity = 1;
-				scoreImg[5].style.opacity = 1;
-				scoreBorder.src = "Resources/Overlay/VS Screen/Score Border Bo5.png";
-			} else {
-				scoreImg[2].style.opacity = 0;
-				scoreImg[5].style.opacity = 0;
-				scoreBorder.src = "Resources/Overlay/VS Screen/Score Border Bo3.png";
-			}
 			bestOfPrev = bestOf;
 		}
 		
@@ -525,35 +521,6 @@ function changeGM(gm) {
 	}
 
 }
-
-
-//score change, pretty simple
-function updateScore(side, pScore, pColor) {
-
-	//if this is the right side, change the number
-	if (side == 1) {
-		side = 3;
-	}
-
-	if (pScore == 0) {
-		scoreImg[side].style.fill = "#414141";
-		scoreImg[side+1].style.fill = "#414141";
-		scoreImg[side+2].style.fill = "#414141";
-	} else if (pScore == 1) {
-		scoreImg[side].style.fill = getHexColor(pColor);
-		scoreImg[side+1].style.fill = "#414141";
-		scoreImg[side+2].style.fill = "#414141";
-	} else if (pScore == 2) {
-		scoreImg[side].style.fill = getHexColor(pColor);
-		scoreImg[side+1].style.fill = getHexColor(pColor);
-		scoreImg[side+2].style.fill = "#414141";
-	} else if (pScore == 3) {
-		scoreImg[side].style.fill = getHexColor(pColor);
-		scoreImg[side+1].style.fill = getHexColor(pColor);
-		scoreImg[side+2].style.fill = getHexColor(pColor);
-	}
-}
-
 
 //color change
 function updateColor(gradEL, textBGEL, color, i, gamemode) {
@@ -934,10 +901,16 @@ function bodyFadeOut() {
 
 	nameFadeOut(pName[0]);
 	nameFadeOut(pName[1]);
+	nameFadeOut(pTag[0]);
+	nameFadeOut(pTag[1]);
 
 	// backdropFadeOut(backdrop1);
 	// backdropFadeOut(backdrop2);
 	backdropFadeOut(behind);
+
+	//overlayVid.play();
+
+	//idTimeout2 = setTimeout( vidPause, 1000);
 
 	// gsap.to(body, { opacity: 0, duration: 1.5});
 	
@@ -976,6 +949,9 @@ function myAnimation(elem) {
 	}
 }
 
+// function vidPause() {
+// 	overlayVid.pause();
+// }
 
 //searches for the main json file
 function getInfo() {
@@ -1023,100 +999,67 @@ function getCharInfo(pCharacter) {
 	})
 }
 
+//searches for a json file with character data
+// function checkWebm(file) {
+// 	// return new Promise(function (resolve) {
+// 		var oReq = new XMLHttpRequest();
+// 		// oReq.onerror = () => {resolve("notFound")}; //for obs local file browser sources
+// 		oReq.onerror = () => {return false};
+// 		oReq.open("GET", file);
+// 		oReq.send();
 
-//character update!
-// function updateChar(pCharacter, pSkin, color, pNum, charInfo, gamemode, startup = false) {
-
-// 	//store so code looks cleaner later
-// 	const charEL = pChar[pNum];
-// 	const trailEL = pTrail[pNum];
-
-// 	//change the image path depending on the character and skin
-// 	//charEL.src = charPath + "Portraits/" + pCharacter + '/' + pSkin + '.png';
-// 	charEL.src = charPath + "webm/" + pCharacter + '.webm';
-
-// 	//             x, y, scale
-// 	// const charPos = [0, 0, 1];
-// 	// //now, check if the character or skin exists in the json file we checked earler
-// 	// if (charInfo != "notFound") {
-// 	// 	if (charInfo.vsScreen[pSkin]) { //if the skin has a specific position
-// 	// 		charPos[0] = charInfo.vsScreen[pSkin].x;
-// 	// 		charPos[1] = charInfo.vsScreen[pSkin].y;
-// 	// 		charPos[2] = charInfo.vsScreen[pSkin].scale;
-// 	// 		trailEL.src = charPath + 'Portraits/Trails/Red.png';
-// 	// 	} else { //if not, use a default position
-// 	// 		charPos[0] = charInfo.vsScreen.neutral.x;
-// 	// 		charPos[1] = charInfo.vsScreen.neutral.y;
-// 	// 		charPos[2] = charInfo.vsScreen.neutral.scale;
-// 	// 		trailEL.src = charPath + 'Portraits/Trails/Red.png';
-// 	// 	}
-// 	// } else { //if the character isnt on the database, set positions for the "?" image
-// 	// 	//this condition is used just to position images well on both sides
-// 	// 	if (pNum % 2 == 0) {
-// 	// 		charPos[0] = -475;
-// 	// 	} else {
-// 	// 		charPos[0] = -500;
-// 	// 	}
-// 	// 	//if doubles, we need to move it up a bit
-// 	// 	if (gamemode == 2) {
-// 	// 		charPos[1] = -125;
-// 	// 	} else {
-// 	// 		charPos[1] = 0;
-// 	// 	}
-// 	// 	charPos[2] = .8;
-// 	// 	trailEL.src = charPath + 'Portraits/Trails/Red.png';
-// 	// }
-
-// 	// //to position the character
-// 	// charEL.style.left = charPos[0] + "px";
-// 	// charEL.style.top = charPos[1] + "px";
-// 	// charEL.style.transform = "scale(" + charPos[2] + ")";
-// 	// trailEL.style.left = charPos[0] + "px";
-// 	// trailEL.style.top = charPos[1] + "px";
-// 	// trailEL.style.transform = "scale(" + charPos[2] + ")";
-
-// 	// //to decide scalling
-// 	// if (pSkin.includes("HD")) {
-// 	// 	charEL.style.imageRendering = "auto"; //default scalling
-// 	// 	trailEL.style.imageRendering = "auto";
-// 	// } else {
-// 	// 	charEL.style.imageRendering = "pixelated"; //sharp scalling
-// 	// 	trailEL.style.imageRendering = "pixelated";
-// 	// }
-
-// 	//this will make the thing wait till the images are fully loaded
-// 	// charEL.decode().then( () => {
-// 	// 	trailEL.decode().then( () => {
-// 	// 		//when both char and trail load, fade them in
-// 	// 		if (startup) {
-// 	// 			initCharaFade(pChara[pNum], trailEL);
-// 	// 		} else {
-// 	// 			charaFadeIn(pChara[pNum], trailEL, charPos[2]);
-// 	// 		}
-// 	// 	})
-// 	// }).catch( () => {
-// 	// 	//if the image fails to load, we will use a placeholder
-// 	// 	charEL.src = charPathBase + 'Portraits/Random/P'+((pNum%2)+1)+'.png';
-// 	// 	if (startup) {
-// 	// 		initCharaFade(pChara[pNum], trailEL);
-// 	// 	} else {
-// 	// 		charaFadeIn(pChara[pNum], trailEL, charPos[2]);
-// 	// 	}
+// 		if(oReq.status == "404") {
+// 			return false;
+// 		} else {
+// 			return true;
+// 		}
 // 	// })
-
 // }
 
-function updateChar(pNum, pCharacter, pSkin, startup=false) {
+//searches for a json file with PR data
+// function getPRInfo() {
+// 	return new Promise(function (resolve) {
+// 		const oReq = new XMLHttpRequest();
+// 		oReq.addEventListener("load", reqListener);
+// 		oReq.open("GET", 'Resources/Texts/PR.json');
+// 		oReq.send();
+
+// 		function reqListener () {
+// 			resolve(JSON.parse(oReq.responseText))
+// 		}
+// 	})
+// }
+
+//Updates sponsors and rank based on PR List
+// function updatePR(pNum, tag, name) {
+// 	let rank = 0;
+// 	for(let i = 0; i < prList.length; i++) {
+// 		if(prList[i].name == name) {
+// 			pSponsor[pNum].src = "Resources/Logos/" + tag + ".png";
+// 		}
+// 	}
+// }
+
+function updateChar(pNum, name, pCharacter, pSkin, startup=false) {
 
 	const vidEL = pChar[pNum];
 	const webmPath = charPath + 'webm/';
-	
+	let PR = false;
+	let rank = 0;
+
 	if (startup) {
-		//if the video cant be found, show aethereal gates
+		//if the video cant be found, show mario
 		vidEL.addEventListener("error", () => {
-			vidEL.src = webmPath + 'Mario.webm';
+			vidEL.src = webmPath + 'Random.webm';
 		});
 	}
+
+	// for(let i = 0; i < prList.length; i++) {
+	// 	if(prList[i].name == name) {
+	// 		PR = true;
+	// 		rank = i;
+	// 	}
+	// }
 
 	if (pCharacter == "Pokemon Trainer") {
 		if (pSkin.substring(pSkin.length-1, pSkin.length) % 2 == 1) {
@@ -1181,7 +1124,11 @@ function updateChar(pNum, pCharacter, pSkin, startup=false) {
 	} else if (pCharacter == "Steve") {
 		if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
 			vidEL.src = webmPath + 'Steve (Alex).webm';
-		} else {
+		} else if (pSkin.substring(pSkin.length-1, pSkin.length) == 7) {
+            vidEL.src = webmPath + 'Steve (Zombie).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 8) {
+            vidEL.src = webmPath + 'Steve (Enderman).webm';
+        } else {
 			vidEL.src = webmPath + 'Steve.webm';
 		}
 	} else if (pCharacter == "Sephiroth") {
@@ -1236,6 +1183,91 @@ function updateChar(pNum, pCharacter, pSkin, startup=false) {
 		} else {
 			vidEL.src = webmPath + 'Byleth (F).webm';
 		}
+	} else if (pCharacter == "Bowser Jr") {
+        if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
+            vidEL.src = webmPath + 'Bowser Jr (Larry).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 3) {
+            vidEL.src = webmPath + 'Bowser Jr (Roy).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 4) {
+            vidEL.src = webmPath + 'Bowser Jr (Wendy).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 5) {
+            vidEL.src = webmPath + 'Bowser Jr (Iggy).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 6) {
+            vidEL.src = webmPath + 'Bowser Jr (Morton).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 7) {
+            vidEL.src = webmPath + 'Bowser Jr (Lemmy).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 8) {
+            vidEL.src = webmPath + 'Bowser Jr (Ludwig).webm';
+        } else {
+            vidEL.src = webmPath + 'Bowser Jr.webm';
+        }
+	} else if(pCharacter == "Mii Gunner") {
+		if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
+            vidEL.src = webmPath + 'Sans.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 3) {
+            vidEL.src = webmPath + 'Cuphead.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 4) {
+            vidEL.src = webmPath + 'Vault Boy.webm';
+		} else {
+			vidEL.src = webmPath + 'Mii Gunner.webm';
+		}
+	} else if(pCharacter == "Mii Swordfighter") {
+		if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
+            vidEL.src = webmPath + 'Rex.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 3) {
+            vidEL.src = webmPath + 'Lloyd.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 4) {
+            vidEL.src = webmPath + 'Isaac.webm';
+		} else {
+			vidEL.src = webmPath + 'Mii Swordfighter.webm';
+		}
+	} else if(pCharacter == "Mii Brawler") {
+		if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
+            vidEL.src = webmPath + 'Shantae.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 3) {
+            vidEL.src = webmPath + 'Creeper.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 4) {
+            vidEL.src = webmPath + 'Bomberman.webm';
+		} else {
+			vidEL.src = webmPath + 'Mii Brawler.webm';
+		}
+	} else if(pCharacter == "Sora") {
+		if (pSkin.substring(pSkin.length-1, pSkin.length) == 1) {
+            vidEL.src = webmPath + 'Sora (KH1).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 5) {
+            vidEL.src = webmPath + 'Sora (TR).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) % 4 == 2) {
+            vidEL.src = webmPath + 'Sora (KH2).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) % 4 == 3) {
+            vidEL.src = webmPath + 'Sora (DDD).webm';
+		} else {
+			vidEL.src = webmPath + 'Sora (KH3).webm';
+		}
+	} else if (ditto) {
+		vidEL.src = webmPath + pCharacter + '(Ditto).webm';
+	// } else if (PR) {
+	// 	if(prList[rank].characters.length > 1) {
+	// 		for(let i = 0; i < prList[rank].characters.length; i++){
+	// 			if(prList[rank].characters[i].name == pCharacter) {
+	// 				let prWebm = mainPath + 'Player Webm/' + name + ' ' + pCharacter + '.webm';
+	// 				let webm = checkWebm(prWebm);
+	// 				if(webm) {
+	// 					vidEL.src = mainPath + 'Player Webm/' + name + ' ' + pCharacter + '.webm';
+	// 				} else {
+	// 					vidEL.src = charPath + 'Webm/' + pCharacter + '.webm';
+	// 				}
+	// 			}
+	// 		}
+	// 	} else {
+	// 		let prWebm = mainPath + 'Player Webm/' + name + '.webm';
+	// 		let webm = checkWebm(prWebm);
+	// 		window.alert(webm);
+	// 		if(webm) {
+	// 			vidEL.src = mainPath + 'Player Webm/' + name + '.webm';
+	// 		} else {
+	// 			vidEL.src = charPath + 'Webm/' + pCharacter + '.webm';
+	// 		}
+	// 	}
 	} else {
 		//actual video path change
 		vidEL.src = charPath + 'Webm/' + pCharacter + '.webm';

@@ -12,7 +12,7 @@ const playerSize = '90px';
 const tagSize = '50px';
 const teamSize = '80px';
 const roundSize = '60px';
-const tournamentSize = '78px';
+let tournamentSize = '78px';
 const casterSize = '25px';
 const twitterSize = '20px';
 
@@ -43,6 +43,7 @@ const maxSides = 2;
 
 let startup = true;
 
+let ditto = false;
 
 //next, global variables for the html elements
 const pWrapper = document.getElementsByClassName("wrappers");
@@ -149,6 +150,12 @@ async function getData(scInfo) {
 			pCharInfo[i] = await getCharInfo(player[i].character);
 		}
 
+		//determine Ken/Ryu Mirror Match
+		if(player[0].character == "Ken" || player[0].character == "Ryu") {
+			if(player[1].character == "Ken" || player[1].character == "Ryu") {
+				ditto = true;
+			}
+		}
 
 		// now the real part begins
 		for (let i = 0; i < maxPlayers; i++) {
@@ -328,6 +335,12 @@ async function getData(scInfo) {
 			}
 		}
 
+		ditto = false;
+		if(player[0].character == "Ken" || player[0].character == "Ryu") {
+			if(player[1].character == "Ken" || player[1].character == "Ryu") {
+				ditto = true;
+			}
+		}
 
 		for (let i = 0; i < maxPlayers; i++) {
 
@@ -1113,6 +1126,50 @@ function updateChar(pNum, pCharacter, pSkin, startup=false) {
         } else {
             vidEL.src = webmPath + 'Bowser Jr.webm';
         }
+	} else if(pCharacter == "Mii Gunner") {
+		if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
+            vidEL.src = webmPath + 'Sans.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 3) {
+            vidEL.src = webmPath + 'Cuphead.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 4) {
+            vidEL.src = webmPath + 'Vault Boy.webm';
+		} else {
+			vidEL.src = webmPath + 'Mii Gunner.webm';
+		}
+	} else if(pCharacter == "Mii Swordfighter") {
+		if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
+            vidEL.src = webmPath + 'Rex.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 3) {
+            vidEL.src = webmPath + 'Lloyd.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 4) {
+            vidEL.src = webmPath + 'Isaac.webm';
+		} else {
+			vidEL.src = webmPath + 'Mii Swordfighter.webm';
+		}
+	} else if(pCharacter == "Mii Brawler") {
+		if (pSkin.substring(pSkin.length-1, pSkin.length) == 2) {
+            vidEL.src = webmPath + 'Shantae.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 3) {
+            vidEL.src = webmPath + 'Creeper.webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 4) {
+            vidEL.src = webmPath + 'Bomberman.webm';
+		} else {
+			vidEL.src = webmPath + 'Mii Brawler.webm';
+		}
+	} else if(pCharacter == "Sora") {
+		if (pSkin.substring(pSkin.length-1, pSkin.length) == 1) {
+            vidEL.src = webmPath + 'Sora (KH1).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) == 5) {
+            vidEL.src = webmPath + 'Sora (TR).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) % 4 == 2) {
+            vidEL.src = webmPath + 'Sora (KH2).webm';
+        } else if (pSkin.substring(pSkin.length-1, pSkin.length) % 4 == 3) {
+            vidEL.src = webmPath + 'Sora (DDD).webm';
+		} else {
+			vidEL.src = webmPath + 'Sora (KH3).webm';
+		}
+	} else if (ditto) {
+		vidEL.src = webmPath + pCharacter + '(Ditto).webm';
 	} else {
 		//actual video path change
 		vidEL.src = charPath + 'Webm/' + pCharacter + '.webm';

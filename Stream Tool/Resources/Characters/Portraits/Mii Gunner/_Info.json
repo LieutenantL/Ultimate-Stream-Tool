@@ -1,6 +1,9 @@
 {
     "skinList": [
- 	 "Mii Gunner1"
+ 	 "Mii Gunner1",
+	 "Mii Gunner2",
+	 "Mii Gunner3",
+	 "Mii Gunner4"
     ],
     "scoreboard": {
          "neutral": {
@@ -14,6 +17,11 @@
             "x": -450,
             "y": 50,
             "scale": 1
+         },
+         "Mii Gunner4": {
+            "x": -500,
+            "y": 50,
+            "scale": 1.5
          }
      },
      "gui": {

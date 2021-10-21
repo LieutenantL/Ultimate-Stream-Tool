@@ -1,0 +1,53 @@
+{
+    "skinList": [
+ 	 "Sora1",
+	 "Sora2",
+	 "Sora3",
+	 "Sora4",
+	 "Sora5",
+	 "Sora6",
+ 	 "Sora7",
+	 "Sora8"
+    ],
+    "scoreboard": {
+         "neutral": {
+             "x": -500,
+             "y": 50,
+             "scale": 1
+        }
+     },
+     "vsScreen": {
+         "neutral": {
+            "x": -500,
+            "y": 0,
+            "scale": 1.1
+         }, 
+	 "Sora2": {
+	    "x": -500,
+            "y": 0,
+            "scale": 1
+	 },
+	 "Sora3": {
+	    "x": -450,
+            "y": 50,
+            "scale": 1.1
+	 },
+	 "Sora6": {
+	    "x": -500,
+            "y": 0,
+            "scale": 1
+	 },
+	 "Sora7": {
+	    "x": -450,
+            "y": 50,
+            "scale": 1.1
+	 }
+     },
+     "gui": {
+         "neutral": {
+            "x": -5,
+            "y": 38,
+            "scale": 4.5
+         }
+	  }
+}

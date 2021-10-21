@@ -46,6 +46,18 @@ body {
     z-index: 3;
 }
 
+.sponsor{
+    z-index: 0;
+    top: 700px;
+    width: 17%;
+}
+#p1Sponsor{
+    left: 600px;
+}
+#p2Sponsor{
+    right: 600px;
+}
+
 #backdrop {
     z-index: 0;
 }

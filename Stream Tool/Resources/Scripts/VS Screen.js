@@ -102,19 +102,6 @@ async function getData(scInfo) {
 	const workshop = scInfo['workshop'];
 
 	//const workshop = true;
-
-	//check if we are forcing HD skins
-	if (scInfo['forceHD']) {
-		for (let i = 0; i < 4; i++) {
-			//check if we dont want to show the LoA renders
-			if (player[i].skin.includes("LoA") && !scInfo['noLoAHD']) {
-				player[i].skin = "LoA HD";
-			} else {
-				player[i].skin = "HD";
-			}
-			
-		}
-	}
 	
 	// if there is no team name, just display "[Color] Team"
 	for (let i = 0; i < maxSides; i++) {
@@ -486,7 +473,7 @@ function changeGM(gm) {
 
 	} else {
 
-		maxPlayers = 2
+		maxPlayers = 2;
 
 		document.getElementById("vsOverlay").src = "Resources/Overlay/VS Screen/VS Overlay.png";
 

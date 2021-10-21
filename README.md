@@ -50,14 +50,12 @@ This project is a heavily modified off of [Readek's](https://twitter.com/Readeku
 
 2v2 is currently only supported on the non-animated base VS Screen and Scoreboard Overlay.
 
-Regarding Kazuya's character select picture, I am waiting for the last character to be released to replace the image. It still works, just doesn't have a correct image!
-
 If you are having trouble downloading/unzipping the project, I have the Stream tool hosted on [Google Drive](https://drive.google.com/drive/folders/1_6SgIsUcMQdlOSn2ObJpa2k2BJHLk1YI)
 
-If you have any suggestions for me, you can contact me on Twitter [@Lieutenant_L5](https://twitter.com/lieutenant_l5)!
+If you have any suggestions for me, you can contact me on Twitter [@Lieutenant_L5](https://twitter.com/lieutenant_l5) or Discord Lt. L#5211!
 
 ---
 
 [French Translation](https://docs.google.com/document/d/1JURl3Muby7b8WUy0RRLge6-Bn0VXHrOo/edit?usp=sharing&ouid=105808034193998201742&rtpof=true&sd=true) by [Vicnin](https://twitter.com/VicninSSB)
 
-Resources: Scene Assets by [Readek](https://twitter.com/Readeku), [The spriters resource](https://www.spriters-resource.com/nintendo_switch/supersmashbrosultimate/), Character Animations by [Shifter](https://twitter.com/WayShifter)
+Resources: Scene Assets by [Readek](https://twitter.com/Readeku), [The spriters resource](https://www.spriters-resource.com/nintendo_switch/supersmashbrosultimate/), Character Animations by [Shifter](https://twitter.com/WayShifter), [Mii Costumes](https://docs.google.com/document/d/1xEan4Xi1SWQLFjztYXFWLHMpv_gcStbQgUzC5y3MxOw/edit)
