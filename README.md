@@ -1,6 +1,8 @@
 ![preview](https://i.imgur.com/N4CCAiq.png)
 # Ultimate Stream Tool
 
+## As of 3/7/22 OBS v27.2 has changed how it handles html files and some visual bugs will show up on the Scoreboard Overlay. Please revert to OBS v26.0 to fix these issues!
+
 ## Features
 - Easy and fast setup using a browser source. Drag and drop!
 - Handy [interface](https://i.imgur.com/xB2h476.png) to quickly change everything you need, like player names, characters, scores, round, casters...
